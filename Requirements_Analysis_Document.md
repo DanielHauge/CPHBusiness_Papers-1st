@@ -14,13 +14,13 @@ Requirements Analysis Document (RAD)
 >> - B. Functional requirements
 >> - C. Nonfunctional requirements
 >> - D. Systemmodels
-> - 4. [Glossary](#Glossary)
+> - 4: [Glossary](#Glossary)
 
 
 ----------
 
 
-Introduction
+1: Introduction
 -------------------
 Introduction here
 
