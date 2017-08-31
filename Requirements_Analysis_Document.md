@@ -9,7 +9,7 @@ The analysis is for a clone of Hacker News. Assignments description: [Here][1]
 >> - C. [Objectives and success criteria of the project](#c-objectives-and-success-criteria-of-the-project)
 >> - D. [Definitions, acronyms, and abbreviations](#d-definitions-acronyms-and-abbreviations)
 >> - E. [References](#e-references)
->> - F. [Overview](#f-Overview)
+>> - F. [Overview](#f-overview)
 > - 2: [Current system](#2-current-system)
 > - 3: [Proposed system](#3-proposed-system)
 >> - A. [Overview](#a-overview-1)
@@ -32,10 +32,10 @@ Purpose of the system here
 ### B. Scope of the system
 ____________
 Scope of the system here
-### C. Objectives and succes criteria of the project
+### C. Objectives and success criteria of the project
 ____________
 Content here
-### D. Definitions, acrinyms, and abbreviations
+### D. Definitions, acronyms, and abbreviations
 ____________
 Content here
 ### E. References
@@ -59,7 +59,7 @@ Current system here
 
 3: Proposed system
 -------------------
-### A.Overview
+### A. Overview
 ____________
 Content here
 ### B. Functional requirements
