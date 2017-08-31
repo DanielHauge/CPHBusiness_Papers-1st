@@ -1,4 +1,4 @@
-#Requirements Analysis Document (RAD)
+Requirements Analysis Document (RAD)
 ==================
 > **Content:**
 > -  1: [Introduction](#Introduction)
