@@ -1,5 +1,7 @@
 Requirements Analysis Document (RAD)
 ==================
+This is a Requirements Analysis Document by studentgroup: Emmely, Kristian, Daniel.
+The analysis is for a clone of Hacker News. Assignments description: [Here][1]
 > **Content:**
 > -  1: [Introduction](#1-introduction)
 >> - A. [Purpose of the system](#purpose-of-the-system)
@@ -24,22 +26,22 @@ Requirements Analysis Document (RAD)
 -------------------
 Introduction here
 
-### Purpose of the system
+### A. Purpose of the system
 ____________
 Purpose of the system here
-### Scope of the system
+### B. Scope of the system
 ____________
 Scope of the system here
-### Objectives and succes criteria of the project
+### C. Objectives and succes criteria of the project
 ____________
 Content here
-### Definitions, acrinyms, and abbreviations
+### D. Definitions, acrinyms, and abbreviations
 ____________
 Content here
-### References
+### E. References
 ____________
 Content here
-### Overview
+### F. Overview
 ____________
 Content here
 
@@ -47,7 +49,7 @@ Content here
 ----------
 
 
-Current system
+2: Current system
 -------------------
 Current system here
 
@@ -55,40 +57,44 @@ Current system here
 ----------
 
 
-Proposed system
+3: Proposed system
 -------------------
-### Overview
+### A.Overview
 ____________
 Content here
-### Functional requirements
+### B. Functional requirements
 ____________
 Content here
-### Nonfunctional requirements
+### C. Nonfunctional requirements
 ____________
 Content here
-#### Usability
+#### a. Usability
 content here
-#### Reliability
+#### b. Reliability
 content here
-#### Performance
+#### c. Performance
 content here
-#### Supportability
+#### d. Supportability
 content here
-#### Implementation
+#### e. Implementation
 content here
-#### Interface
+#### f. Interface
 content here
-#### Pkacking
+#### g. Packing
 content here
-#### Legal
+#### h. Legal
 content here
-### Nonfunctional requirements
+### D. Systemmodels
 ____________
-Nonfunctional requirements here.
-#### Scenarios
+Systemmodels here.
+#### a. Scenarios
 content here
-#### Use case model
+#### b. Use case model
 content here
 
-Glossary
+4: Glossary
 -------------------
+
+
+
+[1]:https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb
