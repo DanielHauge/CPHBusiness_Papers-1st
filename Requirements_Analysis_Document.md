@@ -1,7 +1,7 @@
 Requirements Analysis Document (RAD)
 ==================
 > **Content:**
-> -  1: [Introduction](#Introduction)
+> -  1: [Introduction](#1-introduction)
 >> - A. Purpose of the system
 >> - B. Scope of the system
 >> - C. Objectives and success criteria of the project
