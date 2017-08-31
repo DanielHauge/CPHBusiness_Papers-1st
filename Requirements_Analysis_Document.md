@@ -43,9 +43,17 @@ Content here
 ____________
 Content here
 
+
+----------
+
+
 Current system
 -------------------
 Current system here
+
+
+----------
+
 
 Proposed system
 -------------------
