@@ -1,6 +1,12 @@
 # CPHBusiness_Papers
 Repository for Group: Kristian, Emmely, Daniel.
 
- - Requirements Analysis for Hacker News clone application.
- 
-    Start:31.8. deadline: 6.9. 11am 10 !
+Ongoing Papers
+-------------
+
+**Requirements Analysis for Hacker News clone application**
+ - Start: 31.8 
+ - Deadline: 6.9. @ 11:00am
+
+Finished Papers
+-------------
