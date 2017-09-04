@@ -125,7 +125,7 @@ ____________
 #### a. Scenarios
 **__Insert 2 Scenarios. one with Login and one with submit a thread__**
 
-###### Scenario 1
+##### Scenario 1
 Scenario Name: Account Creation - UC1.
 
 Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
@@ -136,7 +136,7 @@ Flow of events:
 3. Tester completes filling in the form and then submits.
 4. (B) Tester is prompted that the user name has been taken.
 
-###### Scenario 2
+##### Scenario 2
 Scenario Name: Login - UC2.
 
 Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
@@ -147,7 +147,7 @@ Flow of events:
 3. Simulation completes the form by inputting username and password and then submits.
 4. (A) HackerNewsClone responds by going back to the previous page Simulation was on. New links is added to the menu, links for introduction to HN, threads and edit profile information.
 
-###### Scenario 3
+##### Scenario 3
 Scenario Name: Submit Thread - UC4.
 
 Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
