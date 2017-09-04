@@ -98,26 +98,28 @@ Points
 
 ### C. Nonfunctional requirements
 ____________
-Constraints: Has to have a REST API for a simulation program to simulate users.
 #### a. Usability
-- We will not put to much effort into usabillity of the scope of the system since the main purpose is that the system should be used via the API / Simulation program.
+- We will not put to much effort into usabillity of the scope of the system since the main purpose is that the system should be used via the API / Simulation program. Therefore the use of the webapplication will be required to be exactly the same as hacker news.
 #### b. Reliability
 - The webbapplication needs to have 95% uptime.
-- (Could be encrypted / HTTPS)
+- The system cannot loose any information which has been sent from the simulation program.
 #### c. Performance
-- User needs to be notified earliest 10 seconds after action which will give response.
+- The user needs to be notified earliest 10 seconds after action which will give response. This is to ensure good quality throughtout the application.
+- The system needs to be able to handle more throughtput than the simulation programs specifications.
 #### d. Supportability
-- Needs to work on popular browsers such as: Google chrome, Mozilla firefox, Safari, Internet explorer 9.
-- Needs to have a mechanism so that when users post content and the system is down, the content will be published to the system when it's operational again.
+- The system needs to work on popular browsers such as: Google chrome, Mozilla firefox, Safari, Internet explorer 9.
+- The system needs to have a mechanism so that when users post content and the system is down, the content will be published to the system when it's operational again.
+- #Installability(CI?), Scalability(Load balacing?), Maintainability(Able to upgrade system live?)
 #### e. Implementation
-- (Users content posts will not be lost during upgrade. During upgrade, it will post when ever available again.)
+- The system needs to have a REST API for the simulation program to simulate users.
 #### f. Interface
-- Interface for the user will be a browser.
-- The system will have a GUI which is shown in the browser, is similar to hacker news. Top panel for navigation and and login. Content below top panel.
+- The system needs to interact with a database for storage of userinformation and content.
+- The system needs to interact with a REST API for the simulation program and other users.
 #### g. Packing
-- **???**
+- No Packing(physical) requirements?
 #### h. Legal
-- (System will not aprove of ilegal content, and therefor users will be able to mark content as spam, which result in removal if enough marks has been filled.)
+- The system needs to remove ilegal content from the system. (By user input: Mark as spam)
+
 ### D. Systemmodels
 ____________
 #### a. Scenarios
