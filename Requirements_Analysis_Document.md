@@ -64,7 +64,32 @@ ____________
 Content here
 ### B. Functional requirements
 ____________
-Content here
+Account
+- The users must be able to create new account.
+- The users must be able to login.
+- The users must be able to reset password.
+- The users must be able to change password.
+- The users must be able to edit their user information.
+- The users must be able to see their user information.
+Posts
+- The users must be able to create a post thread.
+- The users must be able flag posts.
+- The user must be able to search for posts
+- The user must be able to filter for posts on news, show, jobs and ask.
+- The users must be able to see his own submissions.
+
+Comments
+- The users must be able to comment on posts
+- The users must be able to reply to comments
+- The users must be able to see all comments.
+- The users must be able to see his own comments.
+
+Points
+- The users must be able upvote posts
+- The users must be able downvote posts
+- The users must be able to see his her points.
+- The users should automatically be upgraded to vote when received 50 points or more.
+
 ### C. Nonfunctional requirements
 ____________
 Content here
