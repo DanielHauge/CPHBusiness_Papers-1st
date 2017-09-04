@@ -1,7 +1,8 @@
 Requirements Analysis Document (RAD)
 ==================
 This is a Requirements Analysis Document by studentgroup: Emmely, Kristian, Daniel.
-The analysis is for a clone of Hacker News. Assignments description: [Here][1]
+The analysis is for a clone of Hacker News. Assignments description: [Here][1].
+This document come with an appendix, which is included in this repository. It can be found here: [Appendix](#Requirements_Analysis_Appendix.md)
 > **Content:**
 > -  1: [Introduction](#1-introduction)
 >> - A. [Purpose of the system](#a-purpose-of-the-system)
