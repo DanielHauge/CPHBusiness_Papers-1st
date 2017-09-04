@@ -2,6 +2,8 @@ Requirements Analysis Appendix
 ============================
 This is a Requirements Analysis Appendix by studentgroup: Emmely, Kristian, Daniel.
 
+Requirements Analysis Document can be found here: [Link to document](Requirements_Analysis_Document.md)
+
 
 ## Usecases
 #### UC1
