@@ -72,22 +72,22 @@ The proposed system would be a both a REST api server, that handles the multiple
 ### B. Functional requirements
 ____________
 Account
-- The users must be able to create new account.
-- The users must be able to login.
+- The users must be able to create new account - UC1.
+- The users must be able to login - UC 2.
 - The users must be able to change password.
-- The users must be able to edit their user information.
+- The users must be able to edit their user information - UC3.
 - The users must be able to see their user information.
 
 Posts
-- The users must be able to create a post thread.
+- The users must be able to create a post thread - UC4.
 - The users must be able flag posts.
 - The user must be able to search for posts
 - The user must be able to filter for posts on news, show, jobs and ask.
 - The users must be able to see his own submissions.
 
 Comments
-- The users must be able to comment on posts
-- The users must be able to reply to comments
+- The users must be able to comment on posts - UC5.
+- The users must be able to reply to comments - UC6
 - The users must be able to see all comments.
 - The users must be able to see his own comments.
 
