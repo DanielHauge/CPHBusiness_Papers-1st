@@ -116,7 +116,7 @@ ____________
 - The system needs to interact with a database for storage of userinformation and content.
 - The system needs to interact with a REST API for the simulation program and other users.
 #### g. Packing
-- No Packing(physical) requirements?
+- No Packing(physical) requirements.
 #### h. Legal
 - The system needs to remove ilegal content from the system. (By user input: Mark as spam)
 
