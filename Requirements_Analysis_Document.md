@@ -101,7 +101,6 @@ ____________
 Constraints: Has to have a REST API for a simulation program to simulate users.
 #### a. Usability
 - We will not put to much effort into usabillity of the scope of the system since the main purpose is that the system should be used via the API / Simulation program.
-- **???**
 #### b. Reliability
 - The webbapplication needs to have 95% uptime.
 - (Could be encrypted / HTTPS)
