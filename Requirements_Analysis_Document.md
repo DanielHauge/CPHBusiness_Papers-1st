@@ -124,6 +124,40 @@ ____________
 ____________
 #### a. Scenarios
 **__Insert 2 Scenarios. one with Login and one with submit a thread__**
+
+###### Scenario 1
+Scenario Name: Account Creation - UC1.
+
+Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
+
+Flow of events:
+1. Tester selects login in the menu
+2. HackerNewsClone presents a form for creating a new account
+3. Tester completes filling in the form and then submits.
+4. (B) Tester is prompted that the user name has been taken.
+
+###### Scenario 2
+Scenario Name: Login - UC2.
+
+Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
+
+Flow of events:
+1. Simulation selects Login
+2. HackerNewsClone presents a form for login
+3. Simulation completes the form by inputting username and password and then submits.
+4. (A) HackerNewsClone responds by going back to the previous page Simulation was on. New links is added to the menu, links for introduction to HN, threads and edit profile information.
+
+###### Scenario 3
+Scenario Name: Submit Thread - UC4.
+
+Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
+
+Flow of events:
+1. Simulation selects submit
+2. HackerNewsClone responds with a submit form
+3. Simulation fill in the form giving a Title and URL linking to the news article and submits
+4. (A) HackerNewsClone responds with a thread succesfully submitted message
+
 #### b. Use case model
 **__Insert use case model with all use-cases__**
 
