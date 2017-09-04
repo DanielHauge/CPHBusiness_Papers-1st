@@ -71,6 +71,7 @@ Account
 - The users must be able to change password.
 - The users must be able to edit their user information.
 - The users must be able to see their user information.
+
 Posts
 - The users must be able to create a post thread.
 - The users must be able flag posts.
