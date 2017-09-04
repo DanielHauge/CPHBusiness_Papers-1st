@@ -131,7 +131,7 @@ ____________
 -------------------
 
 ## Usecases
-Use case name: Create New Account.
+Use case name: Create New Account - (UC1).
 
 Participating actors: HN User - System.
 
@@ -149,7 +149,7 @@ Post-conditions:
 
 ----------------------------
 
-Use case name: Login.
+Use case name: Login - (UC2).
 
 Participating actors: HN User -> System.
 
@@ -167,7 +167,7 @@ Exit condition:
 
 --------------------------------
 
-Use case name: UPDATE USER INFORMATION.
+Use case name: UPDATE USER INFORMATION - (UC3).
 
 Participating actors: HN User -> System.
 
@@ -184,7 +184,7 @@ Post-conditions:
 
 --------------------------------
 
-Use case name: Submit a thread.
+Use case name: Submit a thread - (UC4).
 
 Participating actors: HN User -> System.
 
@@ -201,7 +201,7 @@ Post-condition:
 
 -------------------------------
 
-Use cast name: Comment on a thread.
+Use cast name: Comment on a thread - (UC5).
 
 Participating actors: HN User -> System.
 
@@ -218,7 +218,7 @@ Post-condition:
 
 -----------------------------------------
 
-Use case name: Reply to a thread comment.
+Use case name: Reply to a thread comment - (UC6).
 
 Participating actors: HN User -> System.
 
