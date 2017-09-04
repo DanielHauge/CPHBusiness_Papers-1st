@@ -24,7 +24,6 @@ The analysis is for a clone of Hacker News. Assignments description: [Here][1]
 
 1: Introduction
 -------------------
-Introduction here
 
 ### A. Purpose of the system
 ____________
@@ -141,7 +140,7 @@ Flow of events.
 2. The system presents a form for creating a new account.
 3. The user completes the form by filling in username and password. The user then submits the form.
 
-Pre-conditions: None.
+Pre-conditions: The user is not allready logged into an account.
 
 Post-conditions:
 - A: The system responds by going back to the previous page the user was on. A link with the user name and number of karma points shows up in the menu. A links with the title welcome and threads also shows up in the menu.
@@ -159,7 +158,7 @@ Flow of events:
 3. The user completes the form by filling in username and password. The user then submits the form.
 4.The system responds by going back to the previous page the user was on. New links is added to the menu, links for introduction to HN, threads and edit profile information.
 
-Precondition: The user has an account.
+Precondition: The user has an account, and is not allready logged in to an account.
 
 Exit condition:
 - A: 4.The system responds by going back to the previous page the user was on. New links is added to the menu, links for introduction to HN, threads and edit profile information.
