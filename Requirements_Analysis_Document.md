@@ -18,7 +18,7 @@ The analysis is for a clone of Hacker News. Assignments description: [Here][1]
 >> - D. [Systemmodels](#d-systemmodels)
 > - 4: [Glossary](#4-glossary)
 
-> - [Usecases](#Usecases)
+> - [Usecases](#usecases)
 ----------
 
 
