@@ -69,7 +69,14 @@ There is no system currently but we wish to create a web based system that handl
 ____________
 The proposed system would be a both a REST api server, that handles the multiple users, and a Database that contains all the content of system.
 ### B. Functional requirements
-____________
+
+##### API User Functional requirements
+- The user must be able to submit thread via an API.
+- The user must be able to Comment on a thread via an API.
+- The user must be able to query latest comment and/or thread.
+
+------------------------------------------
+##### Human(Browser) User Functional requirements
 Account
 - The users must be able to create new account - UC1.
 - The users must be able to login - UC 2.
