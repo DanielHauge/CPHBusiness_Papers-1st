@@ -159,7 +159,7 @@ Flow of events:
 4. (A) HackerNewsClone responds with a thread succesfully submitted message
 
 #### b. Use case model
-![alt text](http://imgur.com/a/mDtOt "Use case Model")
+[Imgur](https://i.imgur.com/U9wxQeq.png)
 
 4: Glossary
 -------------------
