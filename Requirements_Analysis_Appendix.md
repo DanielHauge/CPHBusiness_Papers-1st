@@ -127,7 +127,7 @@ Post-condition:
 
 --------------------------------
 #### UC8
-Use case name: Query system
+Use case name: Query system.
 
 Participating actors: Simulator Program -> System.
 
@@ -140,3 +140,23 @@ Post-condition:
 - A: The system API responds with a thread and/or comment
 - B: The system API responds with status: System is upgrading
 - C: The system API responds with status: System is unreachable, must likely offline.
+------------------------------
+#### UC9
+
+Use case name: API Create Comment.
+
+Participating actors: Simulator Program -> System.
+
+Flow of events:
+
+1. The user submits a comment with a designated thread.
+
+Pre-condition: 
+
+1. The users is authenticated.
+2. A existing thread for the comment to be added too.
+
+Post-condition:
+
+A: The system API responds with a successfully response and details about the created post.
+B: The system API responds with error and details about the error.
