@@ -2,7 +2,7 @@ Requirements Analysis Document (RAD)
 ==================
 This is a Requirements Analysis Document by studentgroup: Emmely, Kristian, Daniel.
 The analysis is for a clone of Hacker News. Assignments description: [Here][1].
-This document come with an appendix, which is included in this repository. It can be found here: [Appendix](Requirements_Analysis_Appendix.md)
+This document come with an appendix, which is included in this repository. It can be found here: [Appendix](Requirements_Analysis_Appendix.md). The appendix has Usecases.
 > **Content:**
 > -  1: [Introduction](#1-introduction)
 >> - A. [Purpose of the system](#a-purpose-of-the-system)
@@ -175,7 +175,7 @@ Flow of events:
 2. (C) HackerNewsClone's API responds with status: System is unreachable or offline.
 
 #### b. Use case model
-[Imgur](https://i.imgur.com/U9wxQeq.png)
+[Usecases](Requirements_Analysis_Appendix.md)
 
 4: Glossary
 -------------------
