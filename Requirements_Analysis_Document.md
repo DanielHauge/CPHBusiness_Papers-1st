@@ -180,10 +180,9 @@ Participating actor instances: **Anders:Hacker News User, Anna:Hacker News User 
 
 Flow of events:
 1. Anders logs into Hacker News on his break at work. He sees Annas question and about a subject he is very passionate about.Since he is already logged in he open up the thread to view the discussion.
-2.The system presents the Anders with details of the thread, view of the thread discussion and a form to make a comment. 
+2.The system presents the Anders with details of the thread, view of the thread discussion and a form to make a comment.
 3. Anders fills in a comment and submits it.
-4. Later that evening Anna sits in front of the TV she picks up her smart phone and open Hacker News. She can see that more comments have been added to her thread in the list of all threads.
-She clicks on the thread to view more details.
+4. Later that evening Anna sits in front of the TV she picks up her smart phone and open Hacker News. She can see that more comments have been added to her thread in the list of all threads. She clicks on the thread to view more details.
 5. The system presents Anna with details of the thread, view of the discussion and a form to make a comment. Anna sees Anders comment. She chooses to reply by clicking reply on the comment.
 8. The system presents the user with a form to log in or create a new account.
 9. Anna fills in her user name and password to log in.
