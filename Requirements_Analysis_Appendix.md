@@ -43,7 +43,7 @@ Exit condition:
 
 --------------------------------
 #### UC3
-Use case name: UPDATE USER INFORMATION.
+Use case name: Update User Information.
 
 Participating actors: HN User -> System.
 

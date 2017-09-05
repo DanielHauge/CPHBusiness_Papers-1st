@@ -174,6 +174,25 @@ Flow of events:
 1. Helge'sProgram requests the HackerNewsClone's API for latest thread and/or comment.
 2. (C) HackerNewsClone's API responds with status: System is unreachable or offline.
 
+##### Scenario 5
+Scenario Name: Thread Discussion - UC2, UC5, UC6.
+
+Participating actor instances: **Anders:Hacker News User, Anna:Hacker News User & HackerNewsClone:System.**
+
+Flow of events:
+1. Anders logs in to Hacker News on his break at work. He sees Annas question and about at subject he is very passionate about. Since he is already logged in he he open up the thread to view the discussion.
+2.The system presents the Anders with details of the thread, view of the thread discussion and a form to make a comment. 
+3. Anders fills in a comment and submits it.
+4. Later that evening Anna sits in front of the TV and during the commercial she picks up her smart phone and open Hacker News. She can see that more comments has been added to her thread in the display of all threads.
+She clicks on the thread to view more details.
+5. The system presents Anna with details of the thread, view of the discussion and a form to make a comment. Anna see Anders comment. She chooses to reply by clicking reply on the comment.
+8. The system present the user with a form to log in or create a new account.
+9. Anna fills in her user name and password to log in.
+10. The system present The thread details, the comment and a form. 
+11. Anna fills in a reply and submits.
+12. The system presents the user with the page of the thread and the discussion she replied to.
+
+
 #### b. Use case model
 [Usecases](Requirements_Analysis_Appendix.md)
 
