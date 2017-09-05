@@ -139,7 +139,7 @@ Flow of events:
 ##### Scenario 2
 Scenario Name: Login - UC2.
 
-Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
+Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
 
 Flow of events:
 1. Simulation selects Login
@@ -150,13 +150,22 @@ Flow of events:
 ##### Scenario 3
 Scenario Name: Submit Thread - UC4.
 
-Participating actor instances: **Simulation:HN User & HackerNewsClone:System.**
+Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
 
 Flow of events:
 1. Simulation selects submit
 2. HackerNewsClone responds with a submit form
 3. Simulation fill in the form giving a Title and URL linking to the news article and submits
 4. (A) HackerNewsClone responds with a thread succesfully submitted message
+
+##### Scenario 4
+Scenario Name: API-Query - UC8.
+
+Participating actor instances: **Helge'sProgram:Simulator program & HackerNewsClone:System.**
+
+Flow of events:
+1. Helge'sProgram requests the HackerNewsClone's API for latest thread and/or comment.
+2. (C) HackerNewsClone's API responds with status: System is unreachable or offline.
 
 #### b. Use case model
 [Imgur](https://i.imgur.com/U9wxQeq.png)
