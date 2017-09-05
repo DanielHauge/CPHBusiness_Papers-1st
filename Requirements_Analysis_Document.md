@@ -71,9 +71,9 @@ The proposed system would be a both a REST api server, that handles the multiple
 ### B. Functional requirements
 
 ##### API User Functional requirements
-- The user must be able to submit thread via an API.
-- The user must be able to Comment on a thread via an API.
-- The user must be able to query latest comment and/or thread.
+- The user must be able to submit thread via an API - UC7.
+- The user must be able to Comment on a thread via an API - UC9.
+- The user must be able to query latest comment and/or thread - UC8.
 
 ------------------------------------------
 ##### Human(Browser) User Functional requirements
@@ -130,7 +130,6 @@ ____________
 ### D. Systemmodels
 ____________
 #### a. Scenarios
-**__Insert 2 Scenarios. one with Login and one with submit a thread__**
 
 ##### Scenario 1
 Scenario Name: Account Creation - UC1.
