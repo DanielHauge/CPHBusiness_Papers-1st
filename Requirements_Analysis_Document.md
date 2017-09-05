@@ -179,8 +179,7 @@ Scenario Name: Thread Discussion - UC2, UC5, UC6.
 Participating actor instances: **Anders:Hacker News User, Anna:Hacker News User & HackerNewsClone:System.**
 
 Flow of events:
-1. Anders logs into Hacker News on his break at work. He sees Annas question and about a subject he is very passionate about. 
-Since he is already logged in he open up the thread to view the discussion.
+1. Anders logs into Hacker News on his break at work. He sees Annas question and about a subject he is very passionate about.Since he is already logged in he open up the thread to view the discussion.
 2.The system presents the Anders with details of the thread, view of the thread discussion and a form to make a comment. 
 3. Anders fills in a comment and submits it.
 4. Later that evening Anna sits in front of the TV she picks up her smart phone and open Hacker News. She can see that more comments have been added to her thread in the list of all threads.
