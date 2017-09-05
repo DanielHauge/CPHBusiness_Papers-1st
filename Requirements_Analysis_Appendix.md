@@ -125,6 +125,7 @@ Post-condition:
 - A: The system API responds with a successfully response and details about the created post.
 - B: The system API responds with error and details about the error.
 
+--------------------------------
 #### UC8
 Use case name: Query system
 
@@ -138,4 +139,4 @@ Pre-condition: None
 Post-condition:
 - A: The system API responds with a thread and/or comment
 - B: The system API responds with status: System is upgrading
-- C: the system API responds with status: System is unreachable, must likely offline.
+- C: The system API responds with status: System is unreachable, must likely offline.
