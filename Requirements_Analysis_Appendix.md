@@ -110,3 +110,18 @@ Pre-condition: The users is logged in.
 Post-condition:
 - A: The system responds with a comment successfully submitted message and displaying the page of the comments.
 - B: The system present to the user that something went wrong.
+-----------------------------------------
+#### UC7
+Use case name: Create Thread.
+
+Participating actors: Simulator Program -> System.
+
+Flow of events:
+1. The user submits make a post to the system API. The post consists of a Title, Text or URL.
+
+Pre-condition: The users is authenticated.
+
+Post-condition:
+- A: The system API responds with a successfully response and details about the created post.
+- B: The system API responds with error and details about the error.
+
