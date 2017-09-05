@@ -117,7 +117,7 @@ Use case name: Create Thread.
 Participating actors: Simulator Program -> System.
 
 Flow of events:
-1. The user submits make a post to the system API. The post consists of a Title, Text or URL.
+1. The user submits a post to the system API. The post consists of a Title, Text or URL.
 
 Pre-condition: The users is authenticated.
 
