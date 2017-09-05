@@ -125,3 +125,17 @@ Post-condition:
 - A: The system API responds with a successfully response and details about the created post.
 - B: The system API responds with error and details about the error.
 
+#### UC8
+Use case name: Query system
+
+Participating actors: Simulator Program -> System.
+
+Flow of events:
+1. The user requests the systems API for latest thread and/or comment.
+
+Pre-condition: None
+
+Post-condition:
+- A: The system API responds with a thread and/or comment
+- B: The system API responds with status: System is upgrading
+- C: the system API responds with status: System is unreachable, must likely offline.
