@@ -160,9 +160,9 @@ Scenario Name: Submit Thread - UC4.
 Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
 
 Flow of events:
-1. Simulation selects submit
+1. Tester selects submit
 2. HackerNewsClone responds with a submit form
-3. Simulation fill in the form giving a Title and URL linking to the news article and submits
+3. Tester fill in the form giving a Title and URL linking to the news article and submits
 4. (A) HackerNewsClone responds with a thread succesfully submitted message
 
 ##### Scenario 4
