@@ -130,7 +130,6 @@ ____________
 ### D. Systemmodels
 ____________
 #### a. Scenarios
-**__Insert 2 Scenarios. one with Login and one with submit a thread__**
 
 ##### Scenario 1
 Scenario Name: Account Creation - UC1.
