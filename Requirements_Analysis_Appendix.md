@@ -22,6 +22,7 @@ Pre-conditions: The user is not already logged into an account.
 Post-conditions:
 - A: The system responds by going back to the previous page the user was on. A link with the user name and number of karma points shows up in the menu. Links with the title welcome and threads also shows up in the menu.
 - B: User is prompted that the user name has been taken.
+- C: Invalid username or password
 
 ----------------------------
 #### UC2
@@ -33,12 +34,11 @@ Flow of events:
 1. User selects Login
 2. The system presents a form for login.
 3. The user completes the form by filling in username and password. The user then submits the form.
-4.The system responds by going back to the previous page the user was on. New links are added to the menu, links for an introduction to HN, threads and edit profile information.
 
 Precondition: The user has an account, and is not already logged in to an account.
 
 Exit condition:
-- A: 4.The system responds by going back to the previous page the user was on. New links are added to the menu, links for an introduction to HN, threads and edit profile information.
+- A: The system responds by going back to the previous page the user was on. New links are added to the menu, links for an introduction to HN, threads and edit profile information.
 - B: User is prompted that the user name or password was incorrect.
 
 --------------------------------
@@ -49,7 +49,7 @@ Participating actors: HN User -> System.
 
 Flow of events:
 1. Users select the link to user information.
-2. The system responds by presenting a form to the HN User, with the editable fields About, Email, Showdead, Npprocast, Maxvisit, minaway, delay.  and noneditable information about the HN User.
+2. The system responds by presenting a form to the HN User, with the editable fields for the accounts information.  and noneditable information about the HN User.
 3. The HN User make changes and submits the form.
 
 Pre-conditions: The users are logged in.
@@ -89,7 +89,7 @@ Flow of events:
 Pre-condition: The users are logged in.
 
 Post-condition:
-- A: The system responds with sowing the page of the comments.
+- A: The system responds with showing the page of the comments.
 - B: The system present to the user that something went wrong.
 
 -----------------------------------------
@@ -108,7 +108,7 @@ Flow of events:
 Pre-condition: The users are logged in.
 
 Post-condition:
-- A: The system responds with a comment successfully submitted message and displaying the page of the comments.
+- A: The system responds with showing the page of the comment.
 - B: The system present to the user that something went wrong.
 -----------------------------------------
 #### UC7
@@ -124,6 +124,7 @@ Pre-condition: The users are authenticated.
 Post-condition:
 - A: The system API responds with a successful response and details about the created post.
 - B: The system API responds with error and details about the error.
+- C: The system API responds with status: System is unreachable, most likely offline.
 
 --------------------------------
 #### UC8
@@ -132,12 +133,12 @@ Use case name: Query system.
 Participating actors: Simulator Program -> System.
 
 Flow of events:
-1. The user requests the systems API for the latest thread and/or comment.
+1. The user requests the systems API for the latest ingested thread or comment.
 
 Precondition: None
 
 Post-condition:
-- A: The system API responds with a thread and/or comment
+- A: The system API responds with a thread or comment
 - B: The system API responds with status: System is upgrading
 - C: The system API responds with status: System is unreachable, most likely offline.
 ------------------------------
@@ -158,5 +159,6 @@ Pre-condition:
 
 Post-condition:
 
-A: The system API responds with a successful response and details about the created post.
-B: The system API responds with error and details about the error.
+- A: The system API responds with a successful response and details about the created post.
+- B: The system API responds with error and details about the error.
+- C: The system API responds with status: System is unreachable, most likely offline.
