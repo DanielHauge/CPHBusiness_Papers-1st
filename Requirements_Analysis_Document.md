@@ -118,13 +118,12 @@ ____________
 - The system cannot lose any information which has been sent from the simulation program or web users.
 #### c. Performance
 - The user needs to be notified latest 10 seconds after the action which will give a response. This is to ensure good quality throughout the application.
-- The system needs to be able to handle more throughput than the simulation programs specifications.
+- The system needs to be able to handle multiple users at one time.
 #### d. Supportability
 - The system needs to work on popular browsers such as Google Chrome, Mozilla Firefox, Safari, Internet Explorer 9.
 - The system needs to have a mechanism so that when users post content and the system is down, the content will be published to the system when it's operational again.
-- #Installability(CI?), Scalability(Load balancing?), Maintainability(Able to upgrade system live?)
 #### e. Implementation
-- The system needs to have a REST API for the simulation program to simulate users.
+- The system needs to have a REST API for the simulation program to simulate user activity.
 #### f. Interface
 - The system needs to interact with a database for storage of user information and content.
 - The system needs to interact with a REST API for the simulation program and other users.
@@ -154,10 +153,10 @@ Scenario Name: Login - UC2.
 Participating actor instances: **Tester:HN User & HackerNewsClone:System.**
 
 Flow of events:
-1. Simulation selects Login
+1. Tester selects Login
 2. HackerNewsClone presents a form for login
-3. Simulation completes the form by inputting username and password and then submits.
-4. (A) HackerNewsClone responds by going back to the previous page Simulation was on. New links are added to the menu, links for an introduction to HN, threads and edit profile information.
+3. Tester completes the form by inputting username and password and then submits.
+4. (A) HackerNewsClone responds by going back to the previous page Tester was on. New links are added to the menu, links for an introduction to HN, threads and edit profile information.
 
 ##### Scenario 3
 Scenario Name: Submit Thread - UC4.
@@ -173,28 +172,28 @@ Flow of events:
 ##### Scenario 4
 Scenario Name: API-Query - UC8.
 
-Participating actor instances: **Helge'sProgram:Simulator program & HackerNewsClone:System.**
+Participating actor instances: **Helge's Program:Simulator program & HackerNewsClone:System.**
 
 Flow of events:
-1. Helge'sProgram requests the HackerNewsClone's API for the latest thread and/or comment.
+1. Helge's Program requests the HackerNewsClone's API for the latest ingested thread or comment.
 2. (C) HackerNewsClone's API responds with status: System is unreachable or offline.
 
 ##### Scenario 5
-Scenario Name: Thread Discussion - UC2, UC5, UC6.
+Scenario Name: Story Discussion - UC2, UC5, UC6.
 
-Participating actor instances: **Anders:Hacker News User, Anna:Hacker News User & HackerNewsClone:System.**
+Participating actor instances: **Anders:HN User, Anna:HN User & HackerNewsClone:System.**
 
 Flow of events:
-1. Anders logs into Hacker News on his break at work. He sees Annas question and about a subject he is very passionate about. Since he is already logged in he opens up the thread to view the discussion.
-2. The system presents the Anders with details of the thread, view of the thread discussion and a form to make a comment.
+1. Anders logs into Hacker News on his break at work. He sees Anna's story about a subject he is very passionate about. Since he is already logged in he opens up the story to view the discussion.
+2. The system presents Anders with details of the story, view of the story discussion and a form to make a comment.
 3. Anders fills in a comment and submits it.
-4. Later that evening Anna sits in front of the TV she picks up her smart phone and open Hacker News. She can see that more comments have been added to her thread in the list of all threads. She clicks on the thread to view more details.
-5. The system presents Anna with details of the thread, view of the discussion and a form to make a comment. Anna sees Anders comment. She chooses to reply by clicking reply on the comment.
-8. The system presents the user with a form to log in or create a new account.
-9. Anna fills in her user name and password to log in.
-10. The system presents The thread details, the comment, and a form. 
-11. Anna fills in a reply and submits.
-12. The system presents the user with the page of the thread and the discussion she replied to.
+4. Later that evening Anna sits in front of the TV she picks up her smart phone and open Hacker News. She can see that more comments have been added to her story. She clicks on the story to view more details.
+5. The system presents Anna with details of the story, and view of the discussion and a form to make a comment. Anna sees Anders comment, she chooses to answer by clicking reply on the comment.
+6. Because Anna is not yet logged in, the system presents the Anna with a form to log in or create a new account.
+7. Anna fills in her user name and password to log in.
+8. The system presents the story details, and a form to reply. 
+9. Anna fills in an answer and submits.
+10. The system presents the Anna with the page of the story of the discussion she replied to.
 
 
 #### b. Use case model
