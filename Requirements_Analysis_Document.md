@@ -27,7 +27,7 @@ This document come with an appendix, which is included in this repository. It ca
 
 ### A. Purpose of the system
 ____________
-
+Our system is ment to showcase our ability to analyse and replicate a pre existing system, while also maintaining said replica. also implement repairs on the system from feedback that we'll be given over the duration of this semester.
 
 ### B. Scope of the system
 ____________
@@ -36,11 +36,15 @@ The system will also include an API that can be used as an interface to interact
 
 ### C. Objectives and success criteria of the project
 ____________
-The project must be able to handle multiple users posting stories and comments and the same time, while also having a minimum 95% uptime even while the database is down for upgrading. The project needs to allows users to make a Program that can simulate user interaction that creates stories and comments on stories using a REST API, likewise, the users should also be able to do these actions using a web browser as well.
+The project must be able to handle multiple users posting stories and comments at the same time, while also having a minimum 95% uptime even while part of the system is down for upgrading. The project needs to allows users to make a program that can simulate user interaction that creates stories and comments using a REST API, likewise the users should also be able to do these actions using a web browser as well.
 
 ### D. Definitions, acronyms, and abbreviations
 ____________
 The term stories are used when we talk about the concept of posting news stories to the system. When we go into more technical details of the functionality of the system we use the term threads, but stories and threads are essentially the same thing.
+
+we will use HN User for Hacker news user.
+
+When we mention the system, we mean the broad concept of the whole system, which will include server and database and any other component that will effect the application.
 
 ### E. References
 ____________
