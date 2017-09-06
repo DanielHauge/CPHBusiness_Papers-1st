@@ -119,7 +119,7 @@ Participating actors: Simulator Program -> System.
 Flow of events:
 1. The user submits a post to the system API. The post consists of a Title, Text or URL.
 
-Pre-condition: The users is authenticated.
+Pre-condition: The users are authenticated.
 
 Post-condition:
 - A: The system API responds with a successful response and details about the created post.
