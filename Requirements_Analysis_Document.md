@@ -2,7 +2,7 @@ Requirements Analysis Document (RAD)
 ==================
 This is a Requirements Analysis Document by studentgroup: Emmely, Kristian, Daniel.
 The analysis is for a clone of Hacker News. Assignments description: [Here][1].
-This document come with an appendix, which is included in this repository. It can be found here: [Appendix](Requirements_Analysis_Appendix.md). The appendix has Usecases.
+This document come with an appendix, which is included in this repository. It can be found here: [Appendix](Requirements_Analysis_Appendix.md). The appendix has all the usecases.
 > **Content:**
 > -  1: [Introduction](#1-introduction)
 >> - A. [Purpose of the system](#a-purpose-of-the-system)
@@ -27,11 +27,12 @@ This document come with an appendix, which is included in this repository. It ca
 
 ### A. Purpose of the system
 ____________
-The system Hacker News is an online web forum news site, which shares many similarities with the popular site Reddit. it allows users of the website to register themselves as an account and share stories and comment on other users stories, as well as give or take karma from stories and comments that increase or decreases their priority on the site, this allows the users to show what content that contributes to the discussion they have interest in, in the case of Hacker News it's any discussion on hacking, programming or news regarding these activities in general, while taking away focus from disruptive or unwanted discussion.
+
 
 ### B. Scope of the system
 ____________
-The system needs to allow multiple users to interact with the server through a web browser and make their account which enables them to post stories and comment, and also enable them to give or take karma and report stories.
+The system needs to allow multiple users to interact with the server through a web browser and make their account which enables them to post stories and comments, and also enable them to give or take karma and report stories.
+The system will also include an API that can be used as an interface to interacting with the system.
 
 ### C. Objectives and success criteria of the project
 ____________
@@ -57,7 +58,7 @@ The product will be a student project focused on making a copy of Hacker News fr
 
 2: Current system
 -------------------
-There is no system currently but we wish to create a web based system that handles similar to the Hacker News web site.
+The system Hacker News is an online web forum news site, which shares many similarities with the popular site Reddit. it allows users of the website to register themselves with an account and share stories and comment on other users stories, as well as give or take karma from stories and comments that increase or decreases their priority on the site. This allows the users to show what content that contributes to the discussion they have interest in. In the case of Hacker News it's any discussion on hacking, programming or news regarding these activities in general, while taking away focus from disruptive or unwanted discussion.
 
 
 ----------
