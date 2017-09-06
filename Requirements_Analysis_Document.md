@@ -53,7 +53,7 @@ ____________
 
 ### F. Overview
 ____________
-The product will be a student project focused on making a copy of Hacker News from the ground up, while keeping it maintained over the duration of this semester, around halfway through we will hand over testing to another group, who will send feedback on errors that we will have to execute while they are testing, in this period we'll test another group project at the same time, and send them feedback on errors we encounter. This is to showcase our proficiency in building and maintaining a web based system as well as testing a foreign system and giving feedback that's useful to the owners of the system.
+The product will be a student project focused on making a copy of Hacker News from the ground up, while keeping it maintained over the duration of this semester. Around halfway through we will hand over testing to another group, who will send feedback on errors that we will have to repair while they are testing. In this period we'll test another groups project at the same time, and send them feedback on errors we encounter. This is to showcase our proficiency in building and maintaining a web based system as well as testing a foreign system and giving feedback that's useful to the owners of the system.
 
 
 
@@ -62,7 +62,7 @@ The product will be a student project focused on making a copy of Hacker News fr
 
 2: Current system
 -------------------
-The system Hacker News is an online web forum news site, which shares many similarities with the popular site Reddit. it allows users of the website to register themselves with an account and share stories and comment on other users stories, as well as give or take karma from stories and comments that increase or decreases their priority on the site. This allows the users to show what content that contributes to the discussion they have interest in. In the case of Hacker News it's any discussion on hacking, programming or news regarding these activities in general, while taking away focus from disruptive or unwanted discussion.
+The system Hacker News is an online web forum news site, which shares many similarities with the popular site Reddit. it allows users of the website to register themselves with an account and share stories and comment on other users stories. additionaly users can give or take karma from stories and comments that increase or decreases their priority on the site. This allows the users to show what content that contributes to the discussion they have interest in. In the case of Hacker News it's any discussion on hacking, programming or news regarding these activities in general, while taking away focus from disruptive or unwanted discussion.
 
 
 ----------
@@ -72,13 +72,14 @@ The system Hacker News is an online web forum news site, which shares many simil
 -------------------
 ### A. Overview
 ____________
-The proposed system would be a both a REST API server, that handles the multiple users, and a Database that contains all the content of the system.
+The proposed system would be a both a REST API server, that handles the multiple users, and a Database that contains all the content of the system, which the user generated.
 ### B. Functional requirements
 
 ##### API User Functional requirements
 - The user must be able to submit thread via an API - UC7.
 - The user must be able to Comment on a thread via an API - UC9.
-- The user must be able to query the latest comment and/or thread - UC8.
+- The user must be able to query the latest ingested comment or thread - UC8.
+
 
 ------------------------------------------
 ##### Human(Browser) User Functional requirements
@@ -102,21 +103,21 @@ Comments
 - The users must be able to see all comments.
 - The users must be able to see his own comments.
 
-Points
+Karma points
 - The users must be able to upvote posts
-- The users must be able to downvote posts
+- The users must be able to downvote posts, but only when user has above 500 karma points
 - The users must be able to see his her points.
-- The users should automatically be upgraded to vote when received 50 points or more.
+- The users should automatically be upgraded to vote when received 500 points or more.
 
 ### C. Nonfunctional requirements
 ____________
 #### a. Usability
-- We will not put too much effort into the usability of the scope of the system since the main purpose is that the system should be used via the API / Simulation program. Therefore the use of the web application will be required to be exactly the same as hacker news.
+- We will not put too much effort into the usability of the system since the main purpose, is that the system should be used via the API / Simulation program. Therefore the use of the web application will not be required to be exactly the same as hacker news.
 #### b. Reliability
 - The web application needs to have 95% uptime.
-- The system cannot lose any information which has been sent from the simulation program.
+- The system cannot lose any information which has been sent from the simulation program or web users.
 #### c. Performance
-- The user needs to be notified earliest 10 seconds after the action which will give a response. This is to ensure good quality throughout the application.
+- The user needs to be notified latest 10 seconds after the action which will give a response. This is to ensure good quality throughout the application.
 - The system needs to be able to handle more throughput than the simulation programs specifications.
 #### d. Supportability
 - The system needs to work on popular browsers such as Google Chrome, Mozilla Firefox, Safari, Internet Explorer 9.
