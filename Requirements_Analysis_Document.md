@@ -117,7 +117,6 @@ ____________
 - The web application needs to have 95% uptime.
 - The system cannot lose any information which has been sent from the simulation program or web users.
 #### c. Performance
-- The user needs to be notified latest 10 seconds after the action which will give a response. This is to ensure good quality throughout the application.
 - The system needs to be able to handle multiple users at one time.
 #### d. Supportability
 - The system needs to work on popular browsers such as Google Chrome, Mozilla Firefox, Safari, Internet Explorer 9.
@@ -130,7 +129,7 @@ ____________
 #### g. Packing
 - No Packing(physical) requirements.
 #### h. Legal
-- The system needs to remove illegal content from the system. (By user input: Mark as spam)
+- No legal requirements
 
 ### D. Systemmodels
 ____________
