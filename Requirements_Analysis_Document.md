@@ -83,25 +83,25 @@ The proposed system would be a both a REST API server, that handles the multiple
 
 ------------------------------------------
 ##### Human(Browser) User Functional requirements
-Account
-- The users must be able to create a new account - UC1.
-- The users must be able to log in - UC 2.
-- The users must be able to change the password.
-- The users must be able to edit their user information - UC3.
-- The users must be able to see their user information.
+Account - This is extra if time allows
+- (extra) The users must be able to create a new account - UC1.
+- (extra) The users must be able to log in - UC 2.
+- (extra) The users must be able to change the password.
+- (extra) The users must be able to edit their user information - UC3.
+- (extra) The users must be able to see their user information.
 
 Posts
 - The users must be able to create a post thread - UC4.
 - The users must be able to flag posts.
-- The user must be able to search for posts
-- The user must be able to filter for posts on news, show, jobs and ask.
-- The users must be able to see his own submissions.
+- (extra) The user must be able to search for posts
+- (extra) The user must be able to filter for posts on news, show, jobs and ask.
+- (extra) The users must be able to see his own submissions.
 
 Comments
 - The users must be able to comment on posts - UC5.
 - The users must be able to reply to comments - UC6
 - The users must be able to see all comments.
-- The users must be able to see his own comments.
+- (extra) The users must be able to see his own comments.
 
 Karma points
 - The users must be able to upvote posts
@@ -119,7 +119,7 @@ ____________
 #### c. Performance
 - The system needs to be able to handle multiple users at one time.
 #### d. Supportability
-- The system needs to work on popular browsers such as Google Chrome, Mozilla Firefox, Safari, Internet Explorer 9.
+- (extra)The system needs to work on popular browsers such as Google Chrome, Mozilla Firefox, Safari, Internet Explorer 9.
 - The system needs to have a mechanism so that when users post content and the system is down, the content will be published to the system when it's operational again.
 #### e. Implementation
 - The system needs to have a REST API for the simulation program to simulate user activity.
@@ -310,7 +310,7 @@ Participating actors: Simulator Program -> System.
 Flow of events:
 1. The user submits a post to the system API. The post consists of a Title, Text or URL.
 
-Pre-condition: The users are authenticated.
+Pre-condition: none
 
 Post-condition:
 - A: The system API responds with a successful response and details about the created post.
@@ -345,8 +345,7 @@ Flow of events:
 
 Pre-condition: 
 
-1. The users are authenticated.
-2. An existing thread for the comment to be added too.
+1. An existing thread for the comment to be added too.
 
 Post-condition:
 
