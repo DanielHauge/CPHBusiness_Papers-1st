@@ -27,7 +27,7 @@ This document come with an appendix, which is included in this repository. It ca
 
 ### A. Purpose of the system
 ____________
-Our system is ment to showcase our ability to analyse and replicate a pre existing system, while also maintaining said replica. also implement repairs on the system from feedback that we'll be given over the duration of this semester.
+The system is made to allow users to share and discuss stories with a focus on programming and information systems, the system allows self regulation by allowing users to increase the visibility of some discussions, and for long time users to decrease the visibilty of others.
 
 ### B. Scope of the system
 ____________
