@@ -6,10 +6,8 @@ Usefull link: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki
 Ongoing Papers
 -------------
 
-**Requirements Analysis for Hacker News clone application**
- - Start: 31.8 
- - Deadline: 6.9. @ 11:00am
- - [Paper - Requirements_Analysis_Document](Requirements_Analysis_Document.md) [Appendix - Usecases](Requirements_Analysis_Appendix.md)
+
 
 Finished Papers
 -------------
+**Requirements Analysis for Hacker News clone application**
