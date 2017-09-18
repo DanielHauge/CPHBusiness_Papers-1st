@@ -1,4 +1,5 @@
-##Setup Your Remote Machines for Jenkins and the static server
+Setup Your Remote Machines for Jenkins and the static server
+============================================================
 For this we rent the cheapest possible cloud machine at Digital Ocean -which they call "droplet". 
 ###The manual way to create a drolet on Digital Ocean
 The descriptions and the provided setup script should be valid for any Debian-based Linux.
