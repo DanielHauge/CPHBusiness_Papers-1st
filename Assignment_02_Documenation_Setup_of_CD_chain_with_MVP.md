@@ -2,18 +2,21 @@ Setup Your Remote Machines for Jenkins and the static server
 ============================================================
 For this we rent the cheapest possible cloud machine at Digital Ocean -which they call "droplet". 
 
-### The manual way to create a drolet on Digital Ocean
+### Option 1: The manual way to create a drolet on Digital Ocean
 The descriptions and the provided setup script should be valid for any Debian-based Linux.
 
--Create an account at Digital Ocean (https://www.digitalocean.com)
--Create a new Ubuntu 16.04.3 x64 droplet (second smallest machine, 0.015USD per hour/ 10USD per month)
--Register your public SSH key while creating a droplet. 
--If you do not have a pair of keys read on how to do that. (https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
--SSH to your new machine and create a new user, which we will call builder. You can copy the IP <your_ip> from your droplet configuration page.
+- Create an account at Digital Ocean (https://www.digitalocean.com)
+- Create a new Ubuntu 16.04.3 x64 droplet (second smallest machine, 0.015USD per hour/ 10USD per month)
+- Register your public SSH key while creating a droplet. 
+- If you do not have a pair of keys read on how to do that. (https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
+- SSH to your new machine and create a new user, which we will call builder. You can copy the IP <your_ip> from your droplet configuration page.
 
 `ssh root@<your_ip>
+
 adduser builder
+
 usermod -aG sudo builder
+
 exit`
 
 -Enable public key authentication for your new user. The following assumes that you have a keypair readily available.
@@ -37,7 +40,7 @@ exit`
 
 Now you have a remote machine up and running.
 
-### Setup Your Remote Machines for Jenkins and The Static Server running  
+### Option 2: Setup Your Remote Machines for Jenkins and The Static Server with Vagrant
 
 ## Setup Jenkins on Your Remote Machine
 
