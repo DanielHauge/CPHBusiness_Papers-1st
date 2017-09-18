@@ -12,17 +12,25 @@ The descriptions and the provided setup script should be valid for any Debian-ba
 - SSH to your new machine and create a new user, which we will call builder. You can copy the IP <your_ip> from your droplet configuration page.
 
 `ssh root@<your_ip>`
+
 `adduser builder`
+
 `usermod -aG sudo builder`
+
 `exit`
 
 - Enable public key authentication for your new user. The following assumes that you have a keypair readily available.
 
 `ssh root@<your_ip>`
+
 `su - builder`
+
 `mkdir ~/.ssh`
+
 `chmod 700 ~/.ssh`
+
 `echo "<your_public_key>" > ~/.ssh/authorized_keys`
+
 `chmod 600 ~/.ssh/authorized_keys`
 
 In case you have issues with this step make sure to read the guide on initial Ubuntu server setup, especially the section "Step Four — Add Public Key Authentication"!
@@ -30,9 +38,13 @@ In case you have issues with this step make sure to read the guide on initial Ub
 - Copy the setup script to the remote machine, log onto it, make the file executable, and run it.
 
 `scp /path/to/remote/setup.sh builder@<your_ip>:/home/builder`
+
 `ssh builder@<your_ip>`
+
 `chmod u+x ./setup.sh`
+
 `./setup.sh`
+
 `exit`
 
 Now you have a remote machine up and running.
@@ -56,7 +68,9 @@ Now that Jenkins is running you have to configure it. On first time use it will 
 Here you have to insert the key that you get either from the output of the provision script or via:
 
 `vagrant ssh`
+
 `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
+
 Subsequently, choose to Install suggested plugins. we will install the other required plugins later manually.
 Afterwards, create a first admin user on Jenkins. For this example we will call it builder too.
 
@@ -73,14 +87,19 @@ To allow for a login from a non-interactive shell to the remote machine we have 
 You enable non-interactive login to the remote machine by logging to the VM, switching to the jenkins user, creating a pass-phrase-less key pair and moving them to the remote machine.
 
 `vagrant ssh`
+
 `sudo su jenkins`
+
 `ssh-keygen -t rsa -b 2048`
+
 `cat /var/lib/jenkins/.ssh/id_rsa.pub`
 
 Copy the output of the cat command, i.e., the jenkins users' public key into you clipboard. From another terminal session connect to your remote server at DigitalOcean and register yet another public key.
 
 `ssh builder@[remote server IP]`
+
 `echo "<your_public_jenkins_key>" >> ~/.ssh/authorized_keys`
+
 `exit`
 
 To verify that the remote login based on the keys is working, ssh to the machine from the jenkins user in your Vagrant VM:
@@ -90,7 +109,9 @@ To verify that the remote login based on the keys is working, ssh to the machine
 Afterwards, to exit from the remote machine, from the jenkins user, and from the VM type:
 
 `exit`
+
 `exit`
+
 `exit`
 
 ### Creating Your Build Jobs
