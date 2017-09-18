@@ -1,8 +1,14 @@
-Setup Your Remote Machines for Jenkins and the static server
-============================================================
+Group 8: Continues Deliery Setup Chain and How to Replicate it
+==============================================================
+
+## Setup Your Remote Machines for Jenkins and The Static Web Server
+
 For this we rent the cheapest possible cloud machine at Digital Ocean -which they call "droplet". 
 
-### Option 1: The manual way to create a drolet on Digital Ocean
+### Option 1: Setup Your Remote Machines for Jenkins and The Static Server with Vagrant
+[TODo write the command for starting Vagrant]
+
+### Option 2: The Manual Way to Set Up a Droplet on Digital Ocean
 The descriptions and the provided setup script should be valid for any Debian-based Linux.
 
 - Create an account at Digital Ocean (https://www.digitalocean.com)
@@ -49,7 +55,9 @@ In case you have issues with this step make sure to read the guide on initial Ub
 
 Now you have a remote machine up and running.
 
-### Option 2: Setup Your Remote Machines for Jenkins and The Static Server with Vagrant
+## Prepare Your Remote Static Web Server
+
+[TODO]
 
 ## Setup Jenkins on Your Remote Machine
 
@@ -147,5 +155,6 @@ Now, under Build -> Add build step choose Execute shell. Paste the following she
 
 That is it! After creating and running the above four build jobs you should have the web application up and running on your remote machine. Try to point your browser to http://
 
+This guide is base on The lecture notes [05-Continuous Integration and Delivery](https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/lecture_notes/05-Continuous%20Integration%20and%20Delivery.ipynb)
 
 
