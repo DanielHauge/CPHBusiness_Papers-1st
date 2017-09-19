@@ -237,6 +237,6 @@ end
 - Beware that if the deploy script isn't in the current repository, you'll need to change it to your github repository.
 ## We are Done!
 
-That is it! After doing a commit to your designated github repository you should have the web application up and run on our remote machine. Try to point our browser to [Static Web Server IP]
+That is it! After doing a commit to your designated github repository you should have the web application up and running on our remote machine. Try to point our browser to [Static Web Server IP]
 
 This guide is base on The lecture notes [05-Continuous Integration and Delivery](https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/lecture_notes/05-Continuous%20Integration%20and%20Delivery.ipynb)
