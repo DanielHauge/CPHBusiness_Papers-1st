@@ -62,7 +62,7 @@ Here you have to insert the key that you get either from the output of the provi
 
 `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
-Subsequently, choose to Install suggested plugins. we will install the other required plugins later manually.
+Subsequently, choose to Install suggested plugins.
 Afterwards, create a first admin user on Jenkins. For this example, we will call it builder too.
 
 ##### Adding Credentials to Jenkins
