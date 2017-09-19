@@ -33,7 +33,7 @@ It then deploys the docker image that is hosted on the DockerHub to the Static W
 - The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
 - Setup the public and private keys on your locale machine. [Guide here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
 - Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to the remote machine
-- Install Digital Ocean Vagrant plugin. []Guide here](vagrant up --provider=digital_ocean)
+- Install Digital Ocean Vagrant plugin. [Guide here](vagrant up --provider=digital_ocean)
 
 Further down there we will set up two remote machines on digital Ocean with Vagrant scripts.
 
