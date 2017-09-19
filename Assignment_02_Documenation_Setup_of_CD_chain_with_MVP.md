@@ -46,7 +46,12 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 ### Prepare The Remote Jenkins Server - Setup Jenkins
 
 
-- Navigate to the Jenkins server directory in the project where the Vagrant file is contained.
+
+
+- Navigate to the Jenskins server directory in the project where the Vagrant file is contained.
+- Put in your public SSH key in the Vagrant file.
+- And what name you have given the SSH key on Digital Ocean
+- Digital Ocean API key
 - `vagrant up --provider=digital_ocean`
 - After starting the Jenkins should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
 
@@ -73,37 +78,7 @@ There add a Secret text, where the secret is our password to our DockerHub accou
 ![CI Setup](images/jenkins_secret_text.png)
 
 
-##### Allow Jenkins User to Execute Deployment Script Remotely
-To allow for a login from a non-interactive shell to the remote machine we have to create a pair of SSH keys for the Jenkins user, i.e., the Linux user executing the shell scripts in Freestyle jobs.
-You enable non-interactive login to the remote machine by logging to the VM, switching to the Jenkins user, creating a pass-phrase-less key pair and moving them to the remote machine.
 
-`vagrant ssh`
-
-`sudo su jenkins`
-
-`ssh-keygen -t rsa -b 2048`
-
-`cat /var/lib/jenkins/.ssh/id_rsa.pub`
-
-Copy the output of the cat command, i.e., the Jenkins users' public key into your clipboard. From another terminal session connect to your remote server at DigitalOcean and register yet another public key.
-
-`ssh builder@[remote server IP]`
-
-`echo "<our_public_jenkins_key>" >> ~/.ssh/authorized_keys`
-
-`exit`
-
-To verify that the remote login based on the keys is working, ssh to the machine from the jenkins user in our Vagrant VM:
-
-`ssh builder@<our_ip>`
-
-Afterwards, to exit from the remote machine, from the jenkins user, and from the VM type:
-
-`exit`
-
-`exit`
-
-`exit`
 
 ##### Creating Our Build Jobs
 
