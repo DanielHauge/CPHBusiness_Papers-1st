@@ -21,7 +21,7 @@ If the Jenkins Server detects any changes in the GitHub repository it runs the b
 The following is a description of the processes in each job:
 ##### The Build Job
 The Jenkins Server builds a docker image from the Web Application hosted on the GitHub repository. 
-It then pushes the docker image up to the DockerHub repository. More details on how to setup this job [below](###### A Freestyle Project Build Job for Deploy-Docker)
+It then pushes the docker image up to the DockerHub repository.
 ##### The Deploy Job Process
 When the build job is finished the deploys job starts.
 The deploy job starts by preparing the server
@@ -30,7 +30,7 @@ The deploy job starts by preparing the server
 - [TODO]
 
 It then deploys the docker image that is hosted on the DockerHub to the Static Web Server. When this process is finished it checks the status of the Web Application as a final step.
-More details on how to setup this job [below](###### A Freestyle Project Build Job for Deploy-Docker)
+
 
 ## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
