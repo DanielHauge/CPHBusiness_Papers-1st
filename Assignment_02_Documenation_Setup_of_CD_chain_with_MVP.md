@@ -39,9 +39,7 @@ Further down there we will set up two remote machines on digital Ocean with Vagr
 The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest machines)
 
 
-### Prepare The Remote Static Web Server
 
-[TODO]
 
 ### Prepare The Remote Jenkins Server - Setup Jenkins
 
@@ -133,7 +131,9 @@ Navigate to New Item, select Freestyle project, and give it the name Deploy-Dock
 Subsequently, under Source Code Management choose Git and point it to the repository on GitHub containing the Dockerfile [TODO add repo here].
 Now, under Build -> Add build step choose Execute shell. Paste the following shell script into the Command field.
 
+### Prepare The Remote Static Web Server
 
+[TODO]
 
 ## We are Done!
 
