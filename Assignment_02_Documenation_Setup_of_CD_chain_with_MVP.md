@@ -151,23 +151,40 @@ There add a Secret text, where the secret is our password to our DockerHub accou
 
 
 
-##### Creating Our Build Jobs
+##### Creating Our Build Job
 
-In total we will create two build jobs both Freestyle build job. 
-We will use them to execute shell commands to build and deploy our docker containers.
+We are making a Freestyle build job in Jenkins.
+- Name the job Build-Docker. 
+- Under Source Code Magangement choose Git anf put in the GitHub repository.
+- Under Build Trigger -> Select GitHub hook trigger for GITScm polling
+		- Bear in mind that you will have to set up the trigger on GitHub. Go to Settings -> Integration & services and add Jenkins GitHub plugin.
+- Under Build Environment -> Use secret text or files. Add under Secrete Text Variable DOCKERHUB_PWD.
+- In Build - > Add Exectute Shell -> And put in this code:
+```shell
+
+cp -r /var/lib/jenkins/workspace/Build-Docker/ProjectFolders/WebApplication/Dockerfile ${WORKSPACE}
+cp -r /var/lib/jenkins/workspace/Build-Docker/ProjectFolders/WebApplication/basic_http_server.go ${WORKSPACE}
+docker build -t danielhauge/gotestsite:${BUILD_NUMBER} .
+
+set +x
+docker login -u danielhauge -p "${DOCKERHUB_PWD}"
+set -x
+
+docker push danielhauge/gotestsite:${BUILD_NUMBER}
+docker logout
+end
+```
+- Add a second Ecxecute Shell with the following command:
+
+```shell
+ ssh -o "StrictHostKeyChecking no" root@138.68.105.174 ./deploy2.sh ${BUILD_NUMBER} danielhauge
+
+end
+``` 
+We will use it to execute shell commands to build and deploy our docker container.
 The build jobs are the following:
-Build-Docker (Maven project build job, red in image)
-Deploy-Docker (Maven project build job, green in image)
-The dependencies of the build jobs is given by their sequence above.
 
-###### A Freestyle Build Job for Build-Docker
-
-This job will, with the help of git repo build a Docker image on DockerHub. 
-The built code will be consumed by the subsequent freestyle Docker build job.
-The build job consists of two build steps. One for building the Docker container and distributing it to the DockerHub
-Navigate to New Item, select Freestyle project, and give it the name Build-Docker. Subsequently, under Source Code Management choose Git and point it to the corresponding repository on GitHub [TODO add repo here].
-Now, under Build -> Add build step choose Execute shell. Paste the following shell script into the Command field.
-
+Build-Docker
 [TODO add shell script here]
 
 ###### A Freestyle Project Build Job for Deploy-Docker
