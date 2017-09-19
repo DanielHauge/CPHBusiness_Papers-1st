@@ -76,7 +76,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "Jenkins Server", primary: true do |server|
   
   server.vm.provider :digital_ocean do |provider|
-      provider.ssh_key_name = "MSI"
+      provider.ssh_key_name = "[Insert SSH-key Name which was provided on the DigitalOcean Security site]"
       provider.token = '[insert Digital Oceans Token]'
       provider.image = 'ubuntu-16-04-x64'
       provider.region = 'fra1'
