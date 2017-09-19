@@ -48,11 +48,11 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 
 - Navigate to the Jenkins server directory in the project where the Vagrant file is contained.
 - `vagrant up --provider=digital_ocean`
-- After starting the Jenkins should be up and running. You can access it via [droplet IP]:8080. 
+- After starting the Jenkins should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
 
 
 #### Configuring Jenkins
-Access the Jenkins Server by going to [droplet IP]:8080.
+Access the Jenkins Server by going to [Jenkins server droplet IP]:8080.
 Now that Jenkins is running you have to configure it. On the first time use it will present you the following page.
 ![CI Setup](images/jenkins_fst_login.png)
 
