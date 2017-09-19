@@ -22,7 +22,7 @@ If the Jenkins Server detects any changes in the GitHub repository it runs the b
 The following is a description of the processes in each job:
 ##### The Build Job
 The Jenkins Server builds a docker image from the Web Application hosted on the GitHub repository. 
-It then pushes the docker image up to the DockerHub repository.
+It then pushes the docker image up to the DockerHub repository. More details on how to setup this job [below](###### A Freestyle Project Build Job for Deploy-Docker)
 ##### The Deploy Job Process
 When the build job is finished the deploys job starts.
 The deploy job starts by preparing the server
@@ -31,8 +31,7 @@ The deploy job starts by preparing the server
 - [TODO]
 
 It then deploys the docker image that is hosted on the DockerHub to the Static Web Server. When this process is finished it checks the status of the Web Application as a final step.
-Setup Our Remote Machines for Jenkins and The Static Server with Vagrant
-[TODo write the command for starting Vagrant]
+More details on how to setup this job [below](###### A Freestyle Project Build Job for Deploy-Docker)
 
 ## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
@@ -110,7 +109,7 @@ Afterwards, to exit from the remote machine, from the jenkins user, and from the
 
 `exit`
 
-#### Creating Our Build Jobs
+##### Creating Our Build Jobs
 
 In total we will create two build jobs both Freestyle build job. 
 We will use them to execute shell commands to build and deploy our docker containers.
@@ -119,7 +118,7 @@ Build-Docker (Maven project build job, red in image)
 Deploy-Docker (Maven project build job, green in image)
 The dependencies of the build jobs is given by their sequence above.
 
-##### A Freestyle Build Job for Build-Docker
+###### A Freestyle Build Job for Build-Docker
 
 This job will, with the help of git repo build a Docker image on DockerHub. 
 The built code will be consumed by the subsequent freestyle Docker build job.
@@ -129,7 +128,7 @@ Now, under Build -> Add build step choose Execute shell. Paste the following she
 
 [TODO add shell script here]
 
-#### A Freestyle Project Build Job for Deploy-Docker
+###### A Freestyle Project Build Job for Deploy-Docker
 
 This job deploys the web application/REST API - from a Docker container registered at the DockerHub. 
 This build script deploys the container to the remote machine by executing a sequence of shell commands.
