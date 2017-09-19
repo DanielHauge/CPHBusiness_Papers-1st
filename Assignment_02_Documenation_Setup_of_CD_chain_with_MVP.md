@@ -1,10 +1,16 @@
-Group 8: Continues Delivery Setup Chain and How to Replicate it
+Group 8: Continues Delivery Setup Chain Documentation
 ==============================================================
-## The Architecture of Continues Deliver and Integration 
+# Link Minimal Viable Prototype
+
+TO DO In the top of the document, you provide a link to your MVP application serving at least a static HTML page.
+
+# A Brief Description of the Continues Delivery Technology
+
+#### Overview of the Setup
 
 Our setup consists of the following components
 
-- GitHub repository. Repository of the Web Application and where new changes to the application are being pushed.
+- GitHub repository. Repository of the Web Application ( our Minimal Viable Prototype ) and where new changes to the application are being pushed.
 - DockerHub repository. The repository where the docker image is being hosted. 
 - Remote Machine on DigitalOcean with Jenkins Server. This server runs the build and delivery jobs.
 - The remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
@@ -28,7 +34,7 @@ It then deploys the docker image that is hosted on the DockerHub to the Static W
 Setup Our Remote Machines for Jenkins and The Static Server with Vagrant
 [TODo write the command for starting Vagrant]
 
-## Manual How to Setup The Architecture of Continues Deliver and Integration 
+## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
 ## Set Up Remote Machines on Digital Ocean
 The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
