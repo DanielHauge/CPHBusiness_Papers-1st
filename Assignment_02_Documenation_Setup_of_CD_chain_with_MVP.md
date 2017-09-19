@@ -23,6 +23,7 @@ The deploy job starts by preparing the server
 - [TODO]
 - [TODO]
 - [TODO]
+
 It then deploys the docker image that is hosted on the DockerHub to the Static Web Server. When this process is finished it checks the status of the Web Application as a final step.
 Setup Our Remote Machines for Jenkins and The Static Server with Vagrant
 [TODo write the command for starting Vagrant]
