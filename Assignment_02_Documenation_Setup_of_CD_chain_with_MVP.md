@@ -32,6 +32,7 @@ It then deploys the docker image that is hosted on the DockerHub to the Static W
 
 - The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
 - Setup the public and private keys on your locale machine. [Guide here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
+- Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to the remote machine
 
 Further down there we will set up two remote machines on digital Ocean with Vagrant scripts.
 
@@ -44,7 +45,7 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 
 ### Prepare The Remote Jenkins Server - Setup Jenkins
 
-- Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to the remote machine
+
 - cd to the directory with the Vagrantfile and start up the VM. When started up for the first time vagrant up will automatically run the provision script (provision.sh). Note in case you want to allow our group members to log onto the Jenkins build server on this machine uncomment the line # config.vm.network "public_network" in the Vagrantfile.
 - `cd /vm` #[comment]: <> (TODO)`
 - `vagrant up`
