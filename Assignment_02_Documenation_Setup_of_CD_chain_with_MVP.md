@@ -30,12 +30,13 @@ It then deploys the docker image that is hosted on the DockerHub to the Static W
 
 ## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
-### Set Up Remote Machines on Digital Ocean
 The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
+Setup the public and private keys on your loacle machine.
 
-The vagrant script will create two new Ubuntu 16.04.3 x64 droplets (second smallest machine, 0.015USD per hour/ 10USD per month)
+Further down there we will set up two remote machines on digital Ocean with Vagrant scripts.
 
-Now you have a two remote machine up and running.
+The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (second smallest machine, 0.015USD per hour/ 10USD per month)
+
 
 ### Prepare The Remote Static Web Server
 
