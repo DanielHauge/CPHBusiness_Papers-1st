@@ -164,20 +164,20 @@ We are making a Freestyle build job in Jenkins.
 
 cp -r /var/lib/jenkins/workspace/Build-Docker/ProjectFolders/WebApplication/Dockerfile ${WORKSPACE}
 cp -r /var/lib/jenkins/workspace/Build-Docker/ProjectFolders/WebApplication/basic_http_server.go ${WORKSPACE}
-docker build -t danielhauge/gotestsite:${BUILD_NUMBER} .
+docker build -t <YourDockerHubUserName>/<YourImageName>:${BUILD_NUMBER} .
 
 set +x
-docker login -u danielhauge -p "${DOCKERHUB_PWD}"
+docker login -u <YourDockerHubUserName> -p "${DOCKERHUB_PWD}"
 set -x
 
-docker push danielhauge/gotestsite:${BUILD_NUMBER}
+docker push <YourDockerHubUserName>/<YourImageName>:${BUILD_NUMBER}
 docker logout
 end
 ```
 - Add a second Ecxecute Shell with the following command:
 
 ```shell
- ssh -o "StrictHostKeyChecking no" root@138.68.105.174 ./deploy2.sh ${BUILD_NUMBER} danielhauge
+ ssh -o "StrictHostKeyChecking no" root@<YourServerIP> ./deploy2.sh ${BUILD_NUMBER} <YourDockerHubUserName>
 
 end
 ``` 
