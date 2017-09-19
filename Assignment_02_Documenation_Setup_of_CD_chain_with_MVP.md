@@ -1,10 +1,10 @@
 Group 8: Continues Delivery Setup Chain Documentation
 ==============================================================
-# Link Minimal Viable Prototype
+## Link Minimal Viable Prototype
 
 TO DO In the top of the document, you provide a link to your MVP application serving at least a static HTML page.
 
-# A Brief Description of the Continues Delivery Technology
+## A Brief Description of the Continues Delivery Technology
 
 #### Overview of the Setup
 
@@ -36,7 +36,7 @@ Setup Our Remote Machines for Jenkins and The Static Server with Vagrant
 
 ## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
-## Set Up Remote Machines on Digital Ocean
+### Set Up Remote Machines on Digital Ocean
 The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
 
 The vagrant script will create two new Ubuntu 16.04.3 x64 droplets (second smallest machine, 0.015USD per hour/ 10USD per month)
