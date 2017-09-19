@@ -190,88 +190,46 @@ We will use it to execute shell commands to build and deploy our docker containe
 - And what name you have given the SSH key on Digital Ocean
 - Digital Ocean API key
 ```ruby
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-16.04"
+  config.vm.box = 'digital_ocean'
+  config.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
+  config.ssh.private_key_path = '~/.ssh/id_rsa'
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  #
+  config.vm.define "HackerNewsWebApp", primary: true do |server|
 
-  config.vm.network "private_network", type: "dhcp"
-
-  config.vm.define "APPSERVER", primary: true do |server|
-    server.vm.network "private_network", ip: "192.168.20.2"
-    server.vm.network "forwarded_port", guest: 8866, host: 8866
-    server.vm.provider "virtualbox" do |vb|
-      vb.memory = "1024"
-      vb.cpus = "1"
+    server.vm.provider :digital_ocean do |provider|
+      provider.ssh_key_name = "[Insert SSH-key Name which was provided on the DigitalOcean Security site]"
+      provider.token = '[insert Digital Oceans Token]'
+      provider.image = 'ubuntu-16-04-x64'
+      provider.region = 'fra1'
+      provider.size = '512mb'
+      provider.privatenetworking = true
     end
-    server.vm.hostname = "APPSERVER"
+
+    server.vm.hostname = "HackerNewsWebApp"
     server.vm.provision "shell", inline: <<-SHELL
-      echo "Hej from server one!" > /var/www/html/index.html
-	  echo "====================================="
-	  echo "Installing Go... Even thos this might even be needed, since its apart of the golang:jessie image"
-	  echo "======================================="
-	  wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
-      sudo tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz
-      echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.profile
-      echo "export GOPATH=/go_projects" >> $HOME/.profile
-	  echo "=============================="
-	  echo "Installing Docker..."
-	  echo "=============================="
-	  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-	  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-	  sudo apt-get update
-	  sudo apt-get install -y docker-ce
-	  echo "=============================="
-	  echo "Installing Docker-Compose..."
-	  echo "=============================="
-	  sudo -i $(curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose)
-	  sudo chmod +x /usr/local/bin/docker-compose
-	  echo "============================================"
-	  echo "Building Dockerimage localy with Dockerfile"
-	  echo "============================================"
-	  sudo docker build -t mysite /vagrant
-	  echo "============================================"
-	  echo "Dockering-up from docker-compose file."
-	  echo "============================================"
-	  echo "============================================"
-	  echo "============================================"
-	  echo "===========DONE LOADING SERVER=============="
-	  echo "=========192.168.20.2:8866 - Webapp========="
-	  echo "============================================"
-	  echo "============================================"
-	  cp /vagrant/docker-compose.yml /home/vagrant/docker-compose.yml
-	  sudo docker-compose up -d
+		
+		sudo apt-get update
+		sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+		echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
+		sudo apt-get update
+		apt-cache policy docker-engine
+		sudo apt-get install -y docker-engine
+		
+		sudo chmod 700 ~/.ssh
+		
+		sudo echo "[Insert your public KEY here]"> ~/.ssh/authorized_keys		
+		sudo chmod 600 ~/.ssh/authorized_keys
+		wget https://raw.githubusercontent.com/DanielHauge/HackerNews-Grp8/master/ProjectFolders/WebApplication/deploy2.sh
+		chmod u+x ./deploy2.sh
+		
+		
+		
     SHELL
   end
 
-  config.vm.define "DBSERVER" do |client|
-    client.vm.network "private_network", ip: "192.168.20.3"
-    client.vm.network "forwarded_port", guest: 27017, host: 27017
-    client.vm.provider "virtualbox" do |vb|
-      vb.memory = "1024"
-      vb.cpus = "1"
-    end
-    client.vm.hostname = "DBSERVER"
-    client.vm.provision "shell", inline: <<-SHELL
-      echo "Hej from server 2!" > /var/www/html/index.html
-	  echo "Installing MongoDB"
-      sudo apt-get -y install mongodb-server
-	  sudo sed -i '/bind_ip = / s/127.0.0.1/0.0.0.0/' /etc/mongodb.conf
-	  sudo service mongodb restart
-	  echo "============================================"
-	  echo "============================================"
-	  echo "===========DONE LOADING SERVER=============="
-	  echo "=========192.168.20.3:27017 - DB============"
-	  echo "============================================"
-	  echo "============================================"
-    SHELL
-  end
 
-  config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get -y install apache2  
-  SHELL
 end
 ```
 - `vagrant up --provider=digital_ocean`
