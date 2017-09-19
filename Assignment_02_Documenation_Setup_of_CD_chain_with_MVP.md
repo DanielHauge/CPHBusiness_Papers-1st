@@ -233,9 +233,10 @@ Vagrant.configure("2") do |config|
 end
 ```
 - `vagrant up --provider=digital_ocean`
-- After starting the Static Web Server should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
+- After starting the Static Web Server should be up and running. You can access it via [Static Web Server IP]:8080. 
+- beware that if the deploy script isn't in the current repository, you'll need to change it to your github repository
 ## We are Done!
 
-That is it! After creating and running the above four build jobs you should have the web application up and run on our remote machine. Try to point our browser to http://
+That is it! After doing a commit to your designated github repository you should have the web application up and run on our remote machine. Try to point our browser to http://
 
 This guide is base on The lecture notes [05-Continuous Integration and Delivery](https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/lecture_notes/05-Continuous%20Integration%20and%20Delivery.ipynb)
