@@ -48,8 +48,7 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 
 - `cd /DigitalOcean-JenkinsServer/vm`
 - `vagrant up --provider=digital_ocean`
-- You can ssh into this VM via `vagrant ssh`
-- After starting the VM Jenkins should be up and running. You can access it via [our droplet IP]:8080. 
+- After starting the Jenkins should be up and running. You can access it via [our droplet IP]:8080. 
 
 Sutting down use the command `vagrant destroy -y`.
 
