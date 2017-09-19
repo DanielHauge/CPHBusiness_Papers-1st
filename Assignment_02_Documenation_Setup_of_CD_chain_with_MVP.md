@@ -54,7 +54,7 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 #### Configuring Jenkins
 
 Now that Jenkins is running you have to configure it. On the first time use it will present you the following page.
-![CI Setup](images/jenkins_contract_post_build.png)
+![CI Setup](images/jenkins_fst_login.png)
 
 Here you have to insert the key that you get either from the output of the provision script or via:
 
