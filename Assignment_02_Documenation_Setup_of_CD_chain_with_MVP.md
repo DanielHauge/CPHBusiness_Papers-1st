@@ -12,7 +12,7 @@ Our setup consists of the following components
 
 - GitHub repository. Repository of the Web Application ( our Minimal Viable Prototype ) and where new changes to the application are being pushed.
 - DockerHub repository. The repository where the docker image is being hosted. 
-- Remote Machine on DigitalOcean with Jenkins Server. This server runs the build and delivery jobs.
+- Remote Machine on DigitalOcean with Jenkins Server. This server runs the build and delivery jobs. [Link to the server here](http://165.227.168.19:8080/login?from=%2F)
 - The remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
 - The remote machine on DigitalOcean with Database Server. This database server is used by the Web Application.   
 
@@ -53,7 +53,7 @@ Now you have a two remote machine up and running.
 - `cd /vm` #[comment]: <> (TODO)`
 - `vagrant up`
 - You can ssh into this VM via `vagrant ssh`
-- After starting the VM Jenkins should be up and running. You can access it via [our droplet IP]:8080
+- After starting the VM Jenkins should be up and running. You can access it via [our droplet IP]:8080. 
 
 #### Configuring Jenkins
 
