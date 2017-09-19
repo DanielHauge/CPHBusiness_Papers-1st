@@ -233,7 +233,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 - `vagrant up --provider=digital_ocean`
-- After starting the Jenkins should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
+- After starting the Static Web Server should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
 ## We are Done!
 
 That is it! After creating and running the above four build jobs you should have the web application up and run on our remote machine. Try to point our browser to http://
