@@ -16,7 +16,7 @@ Our setup consists of the following components
 - The remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
 
 #### Overview of the Build and Delivery Jobs
-The Jenkins server is set up to check for changes in the GitHub repository with an interval (checks every 5 min in our setup).
+The Jenkins server is set up to check for changes in the GitHub repository.
 If the Jenkins Server detects any changes in the GitHub repository it runs the build and deploys jobs.
 The following is a description of the processes in each job:
 ##### The Build Job
