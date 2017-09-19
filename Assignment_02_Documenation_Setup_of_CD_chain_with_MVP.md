@@ -1,19 +1,19 @@
-Group 8: Continues Deliery Setup Chain and How to Replicate it
+Group 8: Continues Delivery Setup Chain and How to Replicate it
 ==============================================================
 ## The Architecture of Continues Deliver and Integration 
 
-Our setup consist of the following components
+Our setup consists of the following components
 
-- GitHub repository. Repository of the Web Application and where new changes to the application is being pushed.
-- DockerHub repository. Repository where the docker image is being hosted. 
+- GitHub repository. Repository of the Web Application and where new changes to the application are being pushed.
+- DockerHub repository. The repository where the docker image is being hosted. 
 - Remote Machine on DigitalOcean with Jenkins Server. This server runs the build and delivery jobs.
-- Remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
-- Remote machine on DigitalOcean with Database Server. This database server is used by the Web Application.   
+- The remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
+- The remote machine on DigitalOcean with Database Server. This database server is used by the Web Application.   
 
 #### Overview of the Build and Delivery Jobs
-The Jenkins server is set up to check for changes in the GitHub repository with a interval (checks every 5 min in our setup).
-If the Jenkins Server detects any changes in the GitHub repository it runs the build and deploy jobs.
-The following is a description of the the processes in each job:
+The Jenkins server is set up to check for changes in the GitHub repository with an interval (checks every 5 min in our setup).
+If the Jenkins Server detects any changes in the GitHub repository it runs the build and deploys jobs.
+The following is a description of the processes in each job:
 ##### The Build Job
 The Jenkins Server builds a docker image from the Web Application hosted on the GitHub repository. 
 It then pushes the docker image up to the DockerHub repository.
@@ -43,7 +43,7 @@ Now you have a two remote machine up and running.
 ### Prepare The Remote Jenkins Server - Setup Jenkins
 
 - Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to the remote machine
-- cd to the directory with the Vagrantfile and startup the VM. When started up for the first time vagrant up will automatically run the provision script (provision.sh). Note in case you want to allow our group members to log onto the Jenkins build server on this machine uncomment the line # config.vm.network "public_network" in the Vagrantfile.
+- cd to the directory with the Vagrantfile and start up the VM. When started up for the first time vagrant up will automatically run the provision script (provision.sh). Note in case you want to allow our group members to log onto the Jenkins build server on this machine uncomment the line # config.vm.network "public_network" in the Vagrantfile.
 - `cd /vm` #[comment]: <> (TODO)`
 - `vagrant up`
 - You can ssh into this VM via `vagrant ssh`
@@ -51,7 +51,7 @@ Now you have a two remote machine up and running.
 
 #### Configuring Jenkins
 
-Now that Jenkins is running you have to configure it. On first time use it will present you the following page.
+Now that Jenkins is running you have to configure it. On the first time use it will present you the following page.
 [pic]
 
 Here you have to insert the key that you get either from the output of the provision script or via:
@@ -61,19 +61,19 @@ Here you have to insert the key that you get either from the output of the provi
 `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
 Subsequently, choose to Install suggested plugins. we will install the other required plugins later manually.
-Afterwards, create a first admin user on Jenkins. For this example we will call it builder too.
+Afterwards, create a first admin user on Jenkins. For this example, we will call it builder too.
 
 ##### Adding Credentials to Jenkins
 
-To allow for the later use of DockerHub as registry for the container with the final web application you need to be registered at https://hub.docker.com.
+To allow for the later use of DockerHub as the registry for the container with the final web application you need to be registered at https://hub.docker.com.
 After you have created a user at DockerHub, navigate to Credentials -> (global) -> Add Credentials (which corresponds to navigating to the following URL: [Jenkins server IP]:8080/credentials/store/system/domain/_/ ).
 There add a Secret text, where the secret is our password to our DockerHub account.
 
 [pic]
 
 ##### Allow Jenkins User to Execute Deployment Script Remotely
-To allow for a login from a non-interactive shell to the remote machine we have to create a pair of SSH keys for the jenkins user, i.e., the Linux user executing the shell scripts in Freestyle jobs.
-You enable non-interactive login to the remote machine by logging to the VM, switching to the jenkins user, creating a pass-phrase-less key pair and moving them to the remote machine.
+To allow for a login from a non-interactive shell to the remote machine we have to create a pair of SSH keys for the Jenkins user, i.e., the Linux user executing the shell scripts in Freestyle jobs.
+You enable non-interactive login to the remote machine by logging to the VM, switching to the Jenkins user, creating a pass-phrase-less key pair and moving them to the remote machine.
 
 `vagrant ssh`
 
@@ -83,7 +83,7 @@ You enable non-interactive login to the remote machine by logging to the VM, swi
 
 `cat /var/lib/jenkins/.ssh/id_rsa.pub`
 
-Copy the output of the cat command, i.e., the jenkins users' public key into you clipboard. From another terminal session connect to your remote server at DigitalOcean and register yet another public key.
+Copy the output of the cat command, i.e., the Jenkins users' public key into your clipboard. From another terminal session connect to your remote server at DigitalOcean and register yet another public key.
 
 `ssh builder@[remote server IP]`
 
@@ -114,10 +114,10 @@ The dependencies of the build jobs is given by their sequence above.
 
 ##### A Freestyle Build Job for Build-Docker
 
-This job will, with the help of git repo build a docker image on DockerHub. 
+This job will, with the help of git repo build a Docker image on DockerHub. 
 The built code will be consumed by the subsequent freestyle Docker build job.
 The build job consists of two build steps. One for building the Docker container and distributing it to the DockerHub
-Navigate to New Item, select Freestyle project, and give it the name Build-Docker. Subsequently, under Source Code Management choose Git and point it to corresponding repository on GitHub [TODO add repo here].
+Navigate to New Item, select Freestyle project, and give it the name Build-Docker. Subsequently, under Source Code Management choose Git and point it to the corresponding repository on GitHub [TODO add repo here].
 Now, under Build -> Add build step choose Execute shell. Paste the following shell script into the Command field.
 
 [TODO add shell script here]
@@ -125,7 +125,7 @@ Now, under Build -> Add build step choose Execute shell. Paste the following she
 #### A Freestyle Project Build Job for Deploy-Docker
 
 This job deploys the web application/REST API - from a Docker container registered at the DockerHub. 
-This build script deplys the container to the remote machine by executing a sequence of shell commands.
+This build script deploys the container to the remote machine by executing a sequence of shell commands.
 Navigate to New Item, select Freestyle project, and give it the name Deploy-Docker. 
 Subsequently, under Source Code Management choose Git and point it to the repository on GitHub containing the Dockerfile [TODO add repo here].
 Now, under Build -> Add build step choose Execute shell. Paste the following shell script into the Command field.
@@ -134,8 +134,6 @@ Now, under Build -> Add build step choose Execute shell. Paste the following she
 
 ## We are Done!
 
-That is it! After creating and running the above four build jobs you should have the web application up and running on our remote machine. Try to point our browser to http://
+That is it! After creating and running the above four build jobs you should have the web application up and run on our remote machine. Try to point our browser to http://
 
 This guide is base on The lecture notes [05-Continuous Integration and Delivery](https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/lecture_notes/05-Continuous%20Integration%20and%20Delivery.ipynb)
-
-
