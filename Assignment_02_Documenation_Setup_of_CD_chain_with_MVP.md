@@ -182,22 +182,9 @@ end
 end
 ``` 
 We will use it to execute shell commands to build and deploy our docker container.
-The build jobs are the following:
 
-Build-Docker
-[TODO add shell script here]
-
-###### A Freestyle Project Build Job for Deploy-Docker
-
-This job deploys the web application/REST API - from a Docker container registered at the DockerHub. 
-This build script deploys the container to the remote machine by executing a sequence of shell commands.
-Navigate to New Item, select Freestyle project, and give it the name Deploy-Docker. 
-Subsequently, under Source Code Management choose Git and point it to the repository on GitHub containing the Dockerfile [TODO add repo here].
-Now, under Build -> Add build step choose Execute shell. Paste the following shell script into the Command field.
 
 ### Prepare The Remote Static Web Server
-
-[TODO]
 
 ## We are Done!
 
