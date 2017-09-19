@@ -49,6 +49,7 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 
 
 - Navigate to the Jenskins server directory in the project where the Vagrant file is contained.
+<<<<<<< HEAD
 - Put in your public SSH key in the Vagrant file.
 - And what name you have given the SSH key on Digital Ocean
 - Digital Ocean API key
@@ -61,6 +62,9 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 
 end
 ```
+=======
+- Open the vagrantfile and put in your own information where these signs are present <your_info>.
+>>>>>>> 0b8544964b5528cc836268cf8acde1be5d2b2b01
 - `vagrant up --provider=digital_ocean`
 - After starting the Jenkins should be up and running. You can access it via [Jenkins server droplet IP]:8080. 
 
