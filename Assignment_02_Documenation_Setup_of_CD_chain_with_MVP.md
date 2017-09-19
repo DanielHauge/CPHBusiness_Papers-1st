@@ -30,8 +30,8 @@ It then deploys the docker image that is hosted on the DockerHub to the Static W
 
 ## Manual How to Setup The Continues Deliver and Integration Technology of Our Choice
 
-The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
-Setup the public and private keys on your locale machine. [Guide here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
+- The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
+- Setup the public and private keys on your locale machine. [Guide here](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
 
 Further down there we will set up two remote machines on digital Ocean with Vagrant scripts.
 
