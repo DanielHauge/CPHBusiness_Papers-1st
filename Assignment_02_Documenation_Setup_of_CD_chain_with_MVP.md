@@ -1,8 +1,7 @@
 Group 8: Continues Delivery Setup Chain Documentation
 ==============================================================
 ## Link Minimal Viable Prototype
-[Minimal Viable Prototype](https://#)
-TO DO In the top of the document, you provide a link to your MVP application serving at least a static HTML page.
+[Link to website](http://165.227.151.217:8080/)
 
 ## A Brief Description of the Continues Delivery Technology
 
