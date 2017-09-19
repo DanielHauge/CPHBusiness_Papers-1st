@@ -46,7 +46,7 @@ The vagrant scripts will create two new Ubuntu 16.04.3 x64 droplets (smallest ma
 ### Prepare The Remote Jenkins Server - Setup Jenkins
 
 
-- `cd /DigitalOcean-JenkinsServer/vm`
+- Navigate to the Jenkins server directory in the project where the Vagrant file is contained.
 - `vagrant up --provider=digital_ocean`
 - After starting the Jenkins should be up and running. You can access it via [our droplet IP]:8080. 
 
