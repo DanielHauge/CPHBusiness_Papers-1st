@@ -185,7 +185,7 @@ We will use it to execute shell commands to build and deploy our docker containe
 
 
 ### Prepare The Remote Static Web Server
-- Navigate to the Local-GolangSimpleSite directory in the project where the Vagrant file is contained.
+- Navigate to the Static Web Application directory in the project where the Vagrant file is contained.
 - Put in your public SSH key in the Vagrant file.
 - And what name you have given the SSH key on Digital Ocean
 - Digital Ocean API key
