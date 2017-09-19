@@ -1,72 +1,53 @@
 Group 8: Continues Deliery Setup Chain and How to Replicate it
 ==============================================================
+## The Architecture of Continues Deliver and Integration 
 
-## Setup Your Remote Machines for Jenkins and The Static Web Server
+Our setup consist of the following components
 
-For this we rent the cheapest possible cloud machine at Digital Ocean -which they call "droplet". 
+- GitHub repository. Repository of the Web Application and where new changes to the application is being pushed.
+- DockerHub repository. Repository where the docker image is being hosted. 
+- Remote Machine on DigitalOcean with Jenkins Server. This server runs the build and delivery jobs.
+- Remote machine on DigitalOcean with the Static Web Server. Where the Web Application is being deployed and hosted.
+- Remote machine on DigitalOcean with Database Server. This database server is used by the Web Application.   
 
-### Option 1: Setup Your Remote Machines for Jenkins and The Static Server with Vagrant
+#### Overview of the Build and Delivery Jobs
+The Jenkins server is set up to check for changes in the GitHub repository with a interval (checks every 5 min in our setup).
+If the Jenkins Server detects any changes in the GitHub repository it runs the build and deploy jobs.
+The following is a description of the the processes in each job:
+##### The Build Job
+The Jenkins Server builds a docker image from the Web Application hosted on the GitHub repository. 
+It then pushes the docker image up to the DockerHub repository.
+##### The Deploy Job Process
+When the build job is finished the deploys job starts.
+The deploy job starts by preparing the server
+- [TODO]
+- [TODO]
+- [TODO]
+It then deploys the docker image that is hosted on the DockerHub to the Static Web Server. When this process is finished it checks the status of the Web Application as a final step.
+Setup Our Remote Machines for Jenkins and The Static Server with Vagrant
 [TODo write the command for starting Vagrant]
 
-### Option 2: The Manual Way to Set Up a Droplet on Digital Ocean
-The descriptions and the provided setup script should be valid for any Debian-based Linux.
+## Manual How to Setup The Architecture of Continues Deliver and Integration 
 
-- Create an account at Digital Ocean (https://www.digitalocean.com)
-- Create a new Ubuntu 16.04.3 x64 droplet (second smallest machine, 0.015USD per hour/ 10USD per month)
-- Register your public SSH key while creating a droplet. 
-- If you do not have a pair of keys read on how to do that. (https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
-- SSH to your new machine and create a new user, which we will call builder. You can copy the IP <your_ip> from your droplet configuration page.
+### Set Up a Droplet on Digital Ocean
+The pre recusite for this is that you have an account at Digital Ocean (https://www.digitalocean.com)
 
-`ssh root@<your_ip>`
+The vagrant script will create two new Ubuntu 16.04.3 x64 droplets (second smallest machine, 0.015USD per hour/ 10USD per month)
 
-`adduser builder`
+Now you have a two remote machine up and running.
 
-`usermod -aG sudo builder`
-
-`exit`
-
-- Enable public key authentication for your new user. The following assumes that you have a keypair readily available.
-
-`ssh root@<your_ip>`
-
-`su - builder`
-
-`mkdir ~/.ssh`
-
-`chmod 700 ~/.ssh`
-
-`echo "<your_public_key>" > ~/.ssh/authorized_keys`
-
-`chmod 600 ~/.ssh/authorized_keys`
-
-In case you have issues with this step make sure to read the guide on initial Ubuntu server setup, especially the section "Step Four — Add Public Key Authentication"!
-
-- Copy the setup script to the remote machine, log onto it, make the file executable, and run it.
-
-`scp /path/to/remote/setup.sh builder@<your_ip>:/home/builder`
-
-`ssh builder@<your_ip>`
-
-`chmod u+x ./setup.sh`
-
-`./setup.sh`
-
-`exit`
-
-Now you have a remote machine up and running.
-
-## Prepare Your Remote Static Web Server
+## Prepare The Remote Static Web Server
 
 [TODO]
 
-## Setup Jenkins on Your Remote Machine
+## Prepare The Remote Jenkins Server - Setup Jenkins
 
-- Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to your local machine
-- cd to the directory with the Vagrantfile and startup the VM. When started up for the first time vagrant up will automatically run the provision script (provision.sh). Note in case you want to allow your group members to log onto the Jenkins build server on this machine uncomment the line # config.vm.network "public_network" in the Vagrantfile.
+- Install Vagrant (https://www.vagrantup.com/docs/installation/) and VirtualBox (https://www.virtualbox.org/wiki/Downloads) to the remote machine
+- cd to the directory with the Vagrantfile and startup the VM. When started up for the first time vagrant up will automatically run the provision script (provision.sh). Note in case you want to allow our group members to log onto the Jenkins build server on this machine uncomment the line # config.vm.network "public_network" in the Vagrantfile.
 - `cd /vm` #[comment]: <> (TODO)`
 - `vagrant up`
 - You can ssh into this VM via `vagrant ssh`
-- After starting the VM Jenkins should be up and running. You can access it via [your droplet IP]:8080
+- After starting the VM Jenkins should be up and running. You can access it via [our droplet IP]:8080
 
 ### Configuring Jenkins
 
@@ -86,7 +67,7 @@ Afterwards, create a first admin user on Jenkins. For this example we will call 
 
 To allow for the later use of DockerHub as registry for the container with the final web application you need to be registered at https://hub.docker.com.
 After you have created a user at DockerHub, navigate to Credentials -> (global) -> Add Credentials (which corresponds to navigating to the following URL: [Jenkins server IP]:8080/credentials/store/system/domain/_/ ).
-There add a Secret text, where the secret is your password to your DockerHub account.
+There add a Secret text, where the secret is our password to our DockerHub account.
 
 [pic]
 
@@ -106,13 +87,13 @@ Copy the output of the cat command, i.e., the jenkins users' public key into you
 
 `ssh builder@[remote server IP]`
 
-`echo "<your_public_jenkins_key>" >> ~/.ssh/authorized_keys`
+`echo "<our_public_jenkins_key>" >> ~/.ssh/authorized_keys`
 
 `exit`
 
-To verify that the remote login based on the keys is working, ssh to the machine from the jenkins user in your Vagrant VM:
+To verify that the remote login based on the keys is working, ssh to the machine from the jenkins user in our Vagrant VM:
 
-`ssh builder@<your_ip>`
+`ssh builder@<our_ip>`
 
 Afterwards, to exit from the remote machine, from the jenkins user, and from the VM type:
 
@@ -122,7 +103,7 @@ Afterwards, to exit from the remote machine, from the jenkins user, and from the
 
 `exit`
 
-### Creating Your Build Jobs
+### Creating Our Build Jobs
 
 In total we will create two build jobs both Freestyle build job. 
 We will use them to execute shell commands to build and deploy our docker containers.
@@ -153,7 +134,7 @@ Now, under Build -> Add build step choose Execute shell. Paste the following she
 
 ## We are Done!
 
-That is it! After creating and running the above four build jobs you should have the web application up and running on your remote machine. Try to point your browser to http://
+That is it! After creating and running the above four build jobs you should have the web application up and running on our remote machine. Try to point our browser to http://
 
 This guide is base on The lecture notes [05-Continuous Integration and Delivery](https://github.com/datsoftlyngby/soft2017fall-lsd-teaching-material/blob/master/lecture_notes/05-Continuous%20Integration%20and%20Delivery.ipynb)
 
