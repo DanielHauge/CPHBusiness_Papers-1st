@@ -70,8 +70,8 @@ Afterwards, create a first admin user on Jenkins. For this example, we will call
 To allow for the later use of DockerHub as the registry for the container with the final web application you need to be registered at https://hub.docker.com.
 After you have created a user at DockerHub, navigate to Credentials -> (global) -> Add Credentials (which corresponds to navigating to the following URL: [Jenkins server IP]:8080/credentials/store/system/domain/_/ ).
 There add a Secret text, where the secret is our password to our DockerHub account.
+![CI Setup](images/jenkins_admin_user.png)
 
-[pic]
 
 ##### Allow Jenkins User to Execute Deployment Script Remotely
 To allow for a login from a non-interactive shell to the remote machine we have to create a pair of SSH keys for the Jenkins user, i.e., the Linux user executing the shell scripts in Freestyle jobs.
