@@ -36,7 +36,7 @@ The system will also include an API that can be used as an interface to interact
 
 ### C. Objectives and success criteria of the project
 ____________
-The project must be able to handle multiple users posting stories and comments at the same time, while also having a minimum 95% uptime even while part of the system is down for upgrading. The project needs to allows users to make a program that can simulate user interaction that creates stories and comments using a REST API, likewise the users should also be able to do these actions using a web browser as well.
+The project must be able to handle multiple users posting stories and comments at the same time, while also having a minimum 95% uptime even while part of the system is down for upgrading. The project needs to allows users to make a program that can simulate user interaction that creates stories and comments using a REST API, also to query the latest ingested story. likewise the users should also be able to do these actions using a web browser as well.
 
 ### D. Definitions, acronyms, and abbreviations
 ____________
