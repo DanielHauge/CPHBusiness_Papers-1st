@@ -92,7 +92,7 @@ Account - This is extra if time allows
 
 Posts
 - The users must be able to create a post thread - UC4.
-- The users must be able to flag posts.
+- (extra)The users must be able to flag posts.
 - (extra) The user must be able to search for posts
 - (extra) The user must be able to filter for posts on news, show, jobs and ask.
 - (extra) The users must be able to see his own submissions.
@@ -103,11 +103,11 @@ Comments
 - The users must be able to see all comments.
 - (extra) The users must be able to see his own comments.
 
-Karma points
-- The users must be able to upvote posts
-- The users must be able to downvote posts, but only when user has above 500 karma points
-- The users must be able to see his her points.
-- The users should automatically be upgraded to vote when received 500 points or more.
+Karma points (Extra)
+- (extra)The users must be able to upvote posts
+- (extra)The users must be able to downvote posts, but only when user has above 500 karma points
+- (extra)The users must be able to see his her points.
+- (extra)The users should automatically be upgraded to vote when received 500 points or more.
 
 ### C. Nonfunctional requirements
 ____________
