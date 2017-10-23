@@ -10,6 +10,7 @@ Credit: Emmely, Kristian, Daniel.
 ## 2. Logical Datamodel.
 /// Put picture in from the logical data model. see markdown cheatsheet for picture inserts.
 
+
 ## 3. 
 - A complete use case diagram
 /// Put Picture here.
