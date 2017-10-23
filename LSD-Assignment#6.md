@@ -9,7 +9,7 @@ Credit: Emmely, Kristian, Daniel.
 
 ## 2. Logical Datamodel.
 /// Put picture in from the logical data model. see markdown cheatsheet for picture inserts.
-
+![alt text][data]
 
 ## 3. 
 - A complete use case diagram
@@ -22,3 +22,6 @@ Credit: Emmely, Kristian, Daniel.
 /// Write 2 lines about actors and their responsability
 - A Sub-system sequence diagram for all identified scenarios in the use-cases
 /// Put in pictures of the most important sub-system sequence diagram sub-systems.
+
+
+[data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
