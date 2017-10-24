@@ -197,6 +197,19 @@ This Actor is the web user that can interact with the hackernews server with the
 ###### Simulated User
 This actor is a outside user created autonomous program user, that post storys and comments to the system and ask for the latest ingest story or comment, using the servers API system.
 
+Sub-system sequence diagram
+==================
+![UC1][UC1].
+![UC2][UC2].
+![UC3][UC3].
+![UC4][UC4].
+![UC5][UC5].
+![UC6][UC6].
+![UC7][UC7].
+![UC8][UC8].
+![UC9][UC9].
+![UC10][UC10].
+
 - A fully dressed use case description for all use-cases indentified above.
 /// write a fully dressed use case description for the most important use-cases
 - A brief use case description for all other users.
