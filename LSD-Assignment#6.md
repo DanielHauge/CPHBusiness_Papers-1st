@@ -2,7 +2,7 @@ LSD Assigment #6
 ===============================
 This is the LSD-assignment number #6.
 
-Credit: Emmely, Kristian, Daniel.
+Credit: Emmely(cph-el69), Kristian(cph-kf96), Daniel(cph-dh136).
 
 ## 1. Subsystems
 ![subsystems][subsystems].
