@@ -227,6 +227,8 @@ Sub-system sequence diagram
 [UC6]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC6.png
 [UC7]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC7.png
 [UC8]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC8.png
+[UC9]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC9.png
+[UC10]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC10.png
 [data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
 [subsystems]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/SubSystems.png
 [usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/usecasediagram.png
