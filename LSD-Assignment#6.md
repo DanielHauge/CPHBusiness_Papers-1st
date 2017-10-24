@@ -193,14 +193,10 @@ Actor Responsibility
 ==================
 
 ###### HN User
-This Actor is the web user that can interact with the hackernews server with the use of the website GUI, the HN users responsibility is to correctly navigate the GUI and use it's function in the presented forms and functions
+This Actor is the web user that can interact with the hackernews server with the use of the website GUI, the HN users responsibility is to correctly navigate the GUI and use it's function in the presented forms and functions.
 
 ###### Simulated User
 This actor is a outside user created autonomous program user, that post storys and comments to the system and ask for the latest ingest story or comment, using the servers API system.
-###### Server
-this actor is the server system, it works as the interface between the outside actors and the database, which contains the content of the outside actors interaction with the server actor.
-###### Database
-this actor contains the data of the outside users, it's responsible to contain, update and return this information by demands from the outside users through the server actor.
 
 - A fully dressed use case description for all use-cases indentified above.
 /// write a fully dressed use case description for the most important use-cases
