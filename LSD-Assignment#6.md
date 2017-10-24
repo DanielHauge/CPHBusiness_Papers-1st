@@ -210,15 +210,6 @@ Sub-system sequence diagram
 ![UC9][UC9].
 ![UC10][UC10].
 
-- A fully dressed use case description for all use-cases indentified above.
-/// write a fully dressed use case description for the most important use-cases
-- A brief use case description for all other users.
-/// Put use-cases from rad here, and maybe fix errors in it. (requirements have most likely changed)
-- A description of all actors, including responsability
-/// Write 2 lines about actors and their responsability
-- A Sub-system sequence diagram for all identified scenarios in the use-cases
-/// Put in pictures of the most important sub-system sequence diagram sub-systems.
-
 [UC1]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC1.png
 [UC2]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC2.png
 [UC3]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC3.png
