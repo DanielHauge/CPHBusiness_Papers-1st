@@ -26,4 +26,4 @@ Credit: Emmely, Kristian, Daniel.
 
 
 [data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
-[usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/HN-Usecasediagram.pdf
+[usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/usecasediagram.png
