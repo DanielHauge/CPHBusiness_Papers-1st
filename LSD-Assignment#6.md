@@ -9,11 +9,12 @@ Credit: Emmely, Kristian, Daniel.
 
 ## 2. Logical Datamodel.
 /// Put picture in from the logical data model. see markdown cheatsheet for picture inserts.
-![alt text][data]
+![alt text][usecasediagram]
 
 ## 3. 
 - A complete use case diagram
 /// Put Picture here.
+![alt text][data]
 - A fully dressed use case description for all use-cases indentified above.
 /// write a fully dressed use case description for the most important use-cases
 - A brief use case description for all other users.
@@ -25,3 +26,4 @@ Credit: Emmely, Kristian, Daniel.
 
 
 [data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
+[usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/HN-Usecasediagram.pdf
