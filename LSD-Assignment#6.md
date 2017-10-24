@@ -219,7 +219,14 @@ Sub-system sequence diagram
 - A Sub-system sequence diagram for all identified scenarios in the use-cases
 /// Put in pictures of the most important sub-system sequence diagram sub-systems.
 
-
+[UC1]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC1.png
+[UC2]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC2.png
+[UC3]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC3.png
+[UC4]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC4.png
+[UC5]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC5.png
+[UC6]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC6.png
+[UC7]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC7.png
+[UC8]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/UC8.png
 [data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
 [subsystems]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/SubSystems.png
 [usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/usecasediagram.png
