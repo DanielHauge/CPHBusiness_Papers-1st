@@ -13,7 +13,9 @@ Credit: Emmely, Kristian, Daniel.
 
 ## 3. 
 - A complete use case diagram.
+
 ![Use Cse Diagram][usecasediagram]
+
 - A fully dressed use case description for all use-cases indentified above.
 /// write a fully dressed use case description for the most important use-cases
 - A brief use case description for all other users.
