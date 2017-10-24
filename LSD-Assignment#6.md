@@ -5,11 +5,10 @@ This is the LSD-assignment number #6.
 Credit: Emmely, Kristian, Daniel.
 
 ## 1. Subsystems
-/// Put subsystem diagram from the whiteboard in 2.03 here. See markdown cheatsheet for that.
+![subsystems][subsystems].
 
 ## 2. Logical Datamodel.
-/// Put picture in from the logical data model. see markdown cheatsheet for picture inserts.
-![alt text][data]
+![logicaldata][data]
 
 ## 3. 
 - A complete use case diagram.
@@ -209,4 +208,5 @@ This actor is a outside user created autonomous program user, that post storys a
 
 
 [data]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/LogicalDataModel.png
+[subsystems]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/SubSystems.png
 [usecasediagram]: https://github.com/DanielHauge/CPHBusiness_Papers/blob/master/images/usecasediagram.png
