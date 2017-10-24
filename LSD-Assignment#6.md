@@ -109,6 +109,22 @@ Post-condition:
 
 -----------------------------------------
 ###### UC6
+Use cast name: View thread.
+
+Participating actors: HN User -> System.
+
+Flow of events:
+1. The user selects a specific story to open.
+2. The system responds with a form and details from the thread, and all comments. The thread information is made up by the title, the number of points, creator of the thread, days since thread creation, number of comments. The comments are presented with the username of comment submitter, days since threaded, the comments and a link to reply.
+
+Pre-condition: None
+
+Post-condition:
+- A: The system responds with showing the page of the comments.
+- B: The system present to the user that something went wrong.
+
+-----------------------------------------
+###### UC7
 Use case name: Create Thread.
 
 Participating actors: Simulator Program -> System.
@@ -124,7 +140,7 @@ Post-condition:
 - C: The system API responds with status: System is unreachable, most likely offline.
 
 --------------------------------
-###### UC7
+###### UC8
 Use case name: Comment on a thread.
 
 Participating actors: Simulator Program -> System.
@@ -140,7 +156,7 @@ Post-condition:
 - C: The system API responds with status: System is unreachable, most likely offline.
 
 --------------------------------
-###### UC8
+###### UC9
 Use case name: Query system status.
 
 Participating actors: Simulator Program -> System.
@@ -155,7 +171,7 @@ Post-condition:
 - B: The system API responds with status: System is upgrading
 - C: The system API responds with status: System is unreachable, most likely offline.
 ------------------------------
-###### UC9
+###### UC10
 
 Use case name:  Query system latest.
 
