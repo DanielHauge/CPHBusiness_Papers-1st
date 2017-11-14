@@ -7,6 +7,7 @@ We have setup logging, see Logging (Elk stack) on our [HackerNews Github Wiki](h
 
 ### Alarms
 We have setup an alarm on the ammount of messages in RabbitMQ channel, if it get to big, that means the database inserters cannot follow the rate at which they come in. Also if no data is available, that means the server is down and needs to get up as fast as possible.
+we have implemented a LINE alarm that alarms us through a phone app. We also have a general alarm setup for slack, that post all alarm states to that channel.
 
 ### Chrashing the system
 We intentionally chrashed our system, with to many requests to see comments on a thread with alot of comments. This will chrash the Webapi if being done in very quick succesion. 17:20 - 11/13
