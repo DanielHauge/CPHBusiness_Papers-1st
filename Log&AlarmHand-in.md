@@ -7,7 +7,7 @@ We have setup logging, see Logging [Elk stack](139.59.157.29:5601) on our [Hacke
 
 ### Alarms
 In our [Grafana](http://207.154.213.133:3000) we have set up an alarm on the number of messages in RabbitMQ channel, if it gets too big, that means the database inserters cannot follow the rate at which they come in. Also if no data is available, that means the server is down and needs to get up as fast as possible.
-we have implemented a LINE alarm that alarms us through a phone app. We also have a general alarm set up for Slack, that post all alarm states to that channel.
+we have implemented a LINE alarm that alarms us through a phone app. We also have a general alarm set up for [Slack](https://slack.com/), that post all alarm states to that channel.
 
 *Screen shots of the alarms in Grafana:*
 [![https://gyazo.com/88443bb6a289f5419c69e47ab64159bf](https://i.gyazo.com/88443bb6a289f5419c69e47ab64159bf.png)](https://gyazo.com/88443bb6a289f5419c69e47ab64159bf)
