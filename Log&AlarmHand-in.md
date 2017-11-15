@@ -10,6 +10,8 @@ We have setup logging, see Logging [Elk stack](139.59.157.29:5601) on our [Hacke
 #### Alternative
 We have are currently in the process of trying to shift our logging to a more oldschool way of logging to save money on the ELK stack droplet. We have considered to just log to flatfile and use logrotate to manage those logfiles.
 
+To follow progress on this, follow our github wiki documentation on the matter at: [Logging Flatfile](https://github.com/DanielHauge/HackerNews-Grp8/wiki/Logging---Flatfile-(Logrotate))
+
 ### Alarms
 In our [Grafana](http://207.154.213.133:3000) we have set up an alarm on the number of messages in RabbitMQ channel, if it gets too big, that means the database inserters cannot follow the rate at which they come in. Also if no data is available, that means the server is down and needs to get up as fast as possible.
 we have implemented a LINE alarm that alarms us through a phone app. We also have a general alarm set up for [Slack](https://slack.com/), that post all alarm states to that channel.
@@ -24,6 +26,7 @@ we have implemented a LINE alarm that alarms us through a phone app. We also hav
 We intentionally crashed our system, with too many requests to see comments on a thread with alot of comments. This will crash the Web API (gowebapi) if being done in very quick succession. 17:20 - 11/13
 
 Our operators discovered the outage X hours later.
+```Note: the operators have not yet reported and/or noticed the chrash, X's will be replaced by actual values when the operators report it```
 
 ### Post-mortem report
 
