@@ -3,7 +3,7 @@ Hand-in for LSD
 Logging, Alarms, post mortem report.
 
 ### Logging
-We have setup logging, see Logging (Elk stack) on our [HackerNews Github Wiki](https://github.com/DanielHauge/HackerNews-Grp8/wiki/ELK-Stack)
+We have setup logging, see Logging [ 139.59.157.29:5601](Elk stack) on our [HackerNews Github Wiki](https://github.com/DanielHauge/HackerNews-Grp8/wiki/ELK-Stack)
 
 ### Alarms
 We have setup an alarm on the ammount of messages in RabbitMQ channel, if it get to big, that means the database inserters cannot follow the rate at which they come in. Also if no data is available, that means the server is down and needs to get up as fast as possible.
