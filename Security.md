@@ -17,8 +17,9 @@ Threadmodel: Image!
 
 ## 2) Risk Matrix
 
-| Risk No.   | Risk                        | Severity | Likelyhood | Impact      |
-|: -------- :| --------------------------- | -------- | ---------- | ----------- |
+| Risk No    | Risk                        | Severity | Likelyhood | Impact |
+| :--------:| --------------------------- | -------- | ---------- | ----------- |
 | 0 | Meteors falling down and killing everyone | Catastrophic | >Rare | Moderate |
+| 1 | another risk | level? | how likely? | attentionlevel? |
 
 A risk matrix.
