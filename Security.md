@@ -29,8 +29,8 @@ This is our good reputation for having 99%<uptime
 #### Vulnerabilities:
 - Communication is not secure over HTTP protocol
 - We do not restrict what content gets posted to our service
-- HTTP Security Header is missing
 - We do not have limitations or enforce strong user passwords
+- HTTP Security Header is missing
 ..* X-Frame-Options - Protects against Clickjacking attacks	
 ..* X-XSS-Protection - Mitigates Cross-Site Scripting (XSS) attacks	
 ..* X-Content-Type-Options - Prevents possible phishing or XSS attacks		
