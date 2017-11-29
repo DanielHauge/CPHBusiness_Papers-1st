@@ -1,6 +1,6 @@
 ## 1) Assests
 
-A defeinition of our assests and a thread model of our system.
+A definition of our assests and a thread model of our system.
 
 #### Asserts:
 - Data
@@ -50,7 +50,13 @@ This is our good reputation for having 99%<uptime
 | 4 | Digital Ocean goes down and with it our service | Catastrophic | Rare | Moderate |
 
 ## OWTF Report
-Screenshots and short documentation about the penetration tests
-- What tests did we run
-- What were the results from the tests
-- Can the attack be seen in the logs and how do they look.
+We followed the guide of top 10 security risk defined here https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf  
+mostly due to our inexperience with the OWTF we found it hard to specify what test to run specifically, so we did broad sweeps on   several ips and sub domains, and it was only the skipfish method that brought up any kind of "errors" but was marked as only information level issue.  
+We did see a performance spike on thier grafana when we did the skipfish sweep as shown below  
+![https://i.gyazo.com/a72d917771963da2033e280bf1eb1f2c.png](https://i.gyazo.com/a72d917771963da2033e280bf1eb1f2c.png)  
+it should be noted that normally their cpu usage is around 0-5% while our test capped out at 59% usage.  
+
+Since we couldn't get any malicious messages through thier system we couldn't find anything in their logs.  
+
+We did however through the use of skipfish find out that they don't have thier MIME (Multipurpose Internet Mail Extensions) setup which is probably the reason why one of our members antivirus blocks traffic to the hackernews clone site unless they exclude the ip from the protection as having no MIME type results in browsers doing "MIME Sniffing" which makes the browser determine the content of the site, this has malcious use as if the content is a executable the browser will run it automatically.  
+![https://i.gyazo.com/5586105d7a3f6603c7978656e1ddf67e.png](https://i.gyazo.com/5586105d7a3f6603c7978656e1ddf67e.png)
